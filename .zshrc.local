@@ -1,0 +1,13 @@
+#Mongo DB
+export MONGO=/Users/t_arata/develop/mongodb
+
+# PATH
+PATH=$MONGO/bin:/Users/t_arata/develop/scala/bin:/Users/t_arata/develop/android-sdk/tools:~/develop/android-sdk/platform-tools:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}
+export PATH
+
+# aliasの設定
+alias ssh_vm='ssh a-tanaka@192.168.56.101'
+alias ssh_ec2='ssh -i ~/.ssh/arata_rsa_key_ec2 a-tanaka@is-web.voyagegr.info'
+alias ssh_yam='ssh a_tanaka@131.113.37.77 -p 10022 -i .ssh/macair_yamlab_super_server'
+alias ssh_sa_neco='ssh -p 10022 -i ~/.ssh/sakura_arata_pro a-tanaka@49.212.192.138'
+alias ssh_sa_g2k='ssh -i ~/.ssh/sakura_g2k a-tanaka@133.242.132.29'
