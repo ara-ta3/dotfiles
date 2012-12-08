@@ -1,0 +1,33 @@
+"3.5 (created: 2012/08/04 00:41:20)
+
+"source! /Users/t_arata/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+" ブラウザタイトルの変更
+" Firefox デフォルトは 「Mozilla - Firefox」、vimperatorを入れると「vimperator」
+set titlestring=Firefox
+" 詳細表示レベル？ 内容確認中、左下のステータス状況か？
+" →「:javascript! 」で表示される内容レベル
+set verbose=9
+" 不明 内容確認中
+set wildmode=list:full
+
+" 選択文字列ののコピーを <C-c> に割り当て
+map <C-c> :echo Yank!<CR>Y
+
+" j/k でのスクロール幅を 1行 から 3行 に変更
+map j 5<C-e>
+map k 5<C-y>
+
+" Backspace に戻るを割り当て
+map <BS> <A-Left>
+
+" h/l に戻るや進むを割り当て
+map h <A-Left>
+map l <A-Right>
+
+" H/L や ← → でタブ移動
+map <  gT
+map > gt
+
+set hintchars=fjklasdhguionmerwc

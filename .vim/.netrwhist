@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/t_arata/.vim'
+let g:netrw_dirhist_2='/private/etc'
+let g:netrw_dirhist_3='/Users/t_arata/temp'
+let g:netrw_dirhist_4='/usr/share/vim'
+let g:netrw_dirhist_5='/Users/t_arata/Sites/Arbeiten/arbeiten-insidecontents/php'
+let g:netrw_dirhist_6='/Users/t_arata/Sites/MameForm/vendor'
+let g:netrw_dirhist_7='/Users/t_arata/Documents/JAVA_Workspace/.metadata'
+let g:netrw_dirhist_8='/Users/t_arata/Sites'
