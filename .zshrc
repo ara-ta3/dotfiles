@@ -12,7 +12,7 @@ setopt AUTO_PUSHD
 setopt no_beep
 setopt nolistbeep
 
-[-f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # zstyle
  zstyle ':completion:*' menu select true
@@ -63,3 +63,5 @@ alias gcm='git commit'
 alias gcmm='git commit -m'
 alias gs='git status'
 alias gd='git diff'
+
+alias phpunit="phpunit --color"
