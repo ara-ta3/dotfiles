@@ -3,7 +3,7 @@ set smartindent
 "行番号を表示する 
 set number
 "ビープ音をフラッシュに
-set visualbell
+set visualbell t_vb=
 
 nnoremap < gT
 nnoremap > gt
@@ -23,7 +23,7 @@ set softtabstop=4
 set shiftwidth=4
 
 "Color
-"colorscheme elflord 
+colorscheme elflord 
 "
 "source $HOME/.vim/plugin/php-doc.vim
 "inoremap <C-L> <ESC>:call PhpDocSingle()<CR>i
@@ -74,4 +74,10 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
 inoremap <expr><C-y> neocomplcache#close_popup()
 " 現在選択している候補をキャンセルし、ポップアップを閉じます
 inoremap <expr><C-e> neocomplcache#cancel_popup()
+
+
+"php-doc
+inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-D> :call PhpDocSingle()<CR>
+vnoremap <C-D> :call PhpDocRange()<CR>
 
