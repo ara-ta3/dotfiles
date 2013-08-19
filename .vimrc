@@ -1,18 +1,7 @@
-"新しい行を作った時に高度な自動インデントを行う 
+" 新しい行を作った時に高度な自動インデントを行う 
 set smartindent 
 "行番号を表示する 
 set number
-"ビープ音をフラッシュに
-set visualbell t_vb=
-
-nnoremap < gT
-nnoremap > gt
-"phpの補完
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType php :set dictionary=~/.vim/dictionary/PHP.dict
-
-"scalaの補完
-autocmd FileType scala set dictionary=~/.vim/dictionary/scala.dict
 
 "set nocompatible
 set showmatch
@@ -22,15 +11,31 @@ set autoindent
 set softtabstop=4
 set shiftwidth=4
 
+" nnoremap
+nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap < gT
+nnoremap > gt
+
+" imap
+imap jj <Esc>
+
+" 補完
+" phpの補完
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set dictionary=~/.vim/dictionary/PHP.dict
+" scalaの補完
+autocmd FileType scala set dictionary=~/.vim/dictionary/scala.dict
+
 "Color
 colorscheme elflord 
-"
+
 "source $HOME/.vim/plugin/php-doc.vim
 "inoremap <C-L> <ESC>:call PhpDocSingle()<CR>i
 "nnoremap <C-L> :call PhpDocSingle()<CR>
 "vnoremap <C-L> :call PhpDocRange()<CR>-
-"
-""Twigのシンタックス
+
+
+"Twigのシンタックス
 au BufRead,BufNewFile *.twig set syntax=htmldjango
 syntax on
 
@@ -38,7 +43,6 @@ syntax on
 let b:alignta_default_arguments='01'
 let g:alignta_default_arguments='01'
 
-imap jj <esc>
 
 " 補完ウィンドウの設定
 set completeopt=menuone
@@ -76,8 +80,15 @@ inoremap <expr><C-y> neocomplcache#close_popup()
 inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 
-"php-doc
+"php-doc 
+"/*
+" *
+"*/
+"を追加する plugin
 inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-D> :call PhpDocSingle()<CR>
 vnoremap <C-D> :call PhpDocRange()<CR>
 
+" ref vim phpの設定
+let g:ref_phpmanual_path = $HOME.".vim/doc/php/php-chunked-xhtml"
+let g:ref_use_vimproc = 0 
