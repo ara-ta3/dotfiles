@@ -22,18 +22,12 @@ imap jj <Esc>
 " 補完
 " phpの補完
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType php set dictionary=~/.vim/dictionary/PHP.dict
+autocmd FileType php set dictionary=~/dotfiles/.vim/dictionary/PHP.dict
 " scalaの補完
-autocmd FileType scala set dictionary=~/.vim/dictionary/scala.dict
+autocmd FileType scala set dictionary=~/dotfiles/.vim/dictionary/scala.dict
 
 "Color
 colorscheme elflord 
-
-"source $HOME/.vim/plugin/php-doc.vim
-"inoremap <C-L> <ESC>:call PhpDocSingle()<CR>i
-"nnoremap <C-L> :call PhpDocSingle()<CR>
-"vnoremap <C-L> :call PhpDocRange()<CR>-
-
 
 "Twigのシンタックス
 au BufRead,BufNewFile *.twig set syntax=htmldjango
@@ -60,8 +54,8 @@ let g:neocomplcache_min_syntax_length = 3
 " ディクショナリ定義
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
-    \ 'php' : $HOME . '/.vim/dict/php.dict',
-    \ 'ctp' : $HOME . '/.vim/dict/php.dict'
+    \ 'php' : $HOME . '/dotfiles/.vim/dict/php.dict',
+    \ 'ctp' : $HOME . '/dotfiles/.vim/dict/php.dict'
         \ }
 " 前回行われた補完をキャンセルします
 inoremap <expr><C-g> neocomplcache#undo_completion()
@@ -90,5 +84,5 @@ nnoremap <C-D> :call PhpDocSingle()<CR>
 vnoremap <C-D> :call PhpDocRange()<CR>
 
 " ref vim phpの設定
-let g:ref_phpmanual_path = $HOME.".vim/doc/php/php-chunked-xhtml"
+let g:ref_phpmanual_path = $HOME."dotfiles/.vim/doc/php/php-chunked-xhtml"
 let g:ref_use_vimproc = 0 
