@@ -15,6 +15,7 @@ set shiftwidth=4
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap < gT
 nnoremap > gt
+nnoremap <C-e> :NERDTreeToggle<CR>
 
 " imap
 imap jj <Esc>
