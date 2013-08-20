@@ -1,0 +1,5 @@
+# mysql prompt
+m_color0=$'\e[1;36m'
+m_color1=$'\e[1;33m'
+m_clear=$'\e[0m'
+export MYSQL_PS1="$m_color0(\d)$m_color1> $m_clear"

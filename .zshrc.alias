@@ -1,0 +1,18 @@
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -A"
+alias al="ls -A"
+alias lla="ls -Al"
+alias rm="rm -i"
+
+alias cp="cp -i"
+alias mv="mv -i"
+alias grep="grep --color"
+alias gch='git checkout'
+alias ga='git add'
+alias gcm='git commit'
+alias gcmm='git commit -m'
+alias gs='git status'
+alias gd='git diff'
+
+alias phpunit="phpunit --colors"
