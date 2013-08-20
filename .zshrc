@@ -3,6 +3,7 @@
 [ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
 [ -f ~/dotfiles/.zshrc.local ] && source ~/dotfiles/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # zstyle
   zstyle ':completion:*' menu select true
