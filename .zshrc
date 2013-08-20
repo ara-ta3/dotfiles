@@ -1,12 +1,10 @@
-[ -f .zshrc.autoload ] && source .zshrc.autoload
-[ -f .zshrc.prompt ] && source .zshrc.prompt
-[ -f .zshrc.alias ] && source .zshrc.alias
-[ -f .zshrc.mysql ] && source .zshrc.mysql
-[ -f .zshrc.local ] && source .zshrc.local
+[ -f ~/dotfiles/.zshrc.autoload ] && source ~/dotfiles/.zshrc.autoload
+[ -f ~/dotfiles/.zshrc.prompt ] && source ~/dotfiles/.zshrc.prompt
+[ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
+[ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
+[ -f ~/dotfiles/.zshrc.local ] && source ~/dotfiles/.zshrc.local
 
 # zstyle
- zstyle ':completion:*' menu select true
-# directory = blue, symbolic link = magenta
- zstyle ':completion:*' list-colors 'di=34;49' 'ln=35;49'
+  zstyle ':completion:*' menu select true
 # colorstyle (ls)
-LS_COLORS="di=34;49:ln=35;49"
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}

@@ -10,6 +10,5 @@ setopt PUSHD_IGNORE_DUPS
 setopt AUTO_PUSHD
 setopt no_beep
 setopt nolistbeep
-setopt prompt_subst
 
 
