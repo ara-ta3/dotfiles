@@ -87,3 +87,7 @@ vnoremap <C-D> :call PhpDocRange()<CR>
 " ref vim phpの設定
 let g:ref_phpmanual_path = $HOME."dotfiles/.vim/doc/php/php-chunked-xhtml"
 let g:ref_use_vimproc = 0 
+
+" スペース可視化
+set list
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
