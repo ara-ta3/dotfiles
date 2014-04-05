@@ -96,7 +96,7 @@ set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 " @see also http://qiita.com/1987yama3/items/1caa0e167912a51ae9cc
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle.git
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
@@ -104,15 +104,12 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'scrooloose/nerdtree'
+Bundle "mattn/emmet-vim"
+Bundle 'ref.vim'
+Bundle 'neocomplcache'
+Bundle 'EnhCommentify.vim'
+
 " ...
 filetype plugin indent on     " required!
 "
