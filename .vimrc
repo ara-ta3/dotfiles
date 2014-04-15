@@ -109,6 +109,7 @@ Bundle "mattn/emmet-vim"
 Bundle 'ref.vim'
 Bundle 'neocomplcache'
 Bundle 'EnhCommentify.vim'
+Bundle 'aharisu/vim_goshrepl'
 
 " ...
 filetype plugin indent on     " required!
