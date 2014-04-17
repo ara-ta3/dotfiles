@@ -91,3 +91,34 @@ let g:ref_use_vimproc = 0
 " スペース可視化
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+
+" Bundleの設定
+" @see also http://qiita.com/1987yama3/items/1caa0e167912a51ae9cc
+set nocompatible               " be iMproved
+filetype off                   " required!
+set rtp+=~/.vim/vundle.git
+call vundle#rc()
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+" My Bundles here:
+"
+" original repos on github
+Bundle 'scrooloose/nerdtree'
+Bundle "mattn/emmet-vim"
+Bundle 'ref.vim'
+Bundle 'neocomplcache'
+Bundle 'EnhCommentify.vim'
+Bundle 'aharisu/vim_goshrepl'
+
+" ...
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
