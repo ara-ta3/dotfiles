@@ -97,26 +97,27 @@ set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 " @see also http://qiita.com/1987yama3/items/1caa0e167912a51ae9cc
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=~/.vim/vundle.git
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle "mattn/emmet-vim"
-Bundle 'ref.vim'
-Bundle 'neocomplcache'
-Bundle 'EnhCommentify.vim'
-Bundle 'aharisu/vim_goshrepl'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'elzr/vim-json'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'vim-scripts/JavaScript-Indent'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'ref.vim'
+Plugin 'neocomplcache'
+Plugin 'EnhCommentify.vim'
+Plugin 'aharisu/vim_goshrepl'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'elzr/vim-json'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/JavaScript-Indent'
 
+call vundle#end()
 filetype plugin indent on     " required!
 "
 " Brief help

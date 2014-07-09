@@ -1,3 +1,4 @@
 *.local
 .vim/.netrwhist
-.vim/bundle
+!/.vim/bundle/Vundle.vim
+/.vim/bundle
