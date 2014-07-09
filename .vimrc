@@ -112,6 +112,9 @@ Bundle 'EnhCommentify.vim'
 Bundle 'aharisu/vim_goshrepl'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
+Bundle 'elzr/vim-json'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'vim-scripts/JavaScript-Indent'
 
 filetype plugin indent on     " required!
 "
