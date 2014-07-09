@@ -1,3 +1,5 @@
+" zshの読み込みに時間がかかるためbashに変更
+set shell=/bin/bash
 " 新しい行を作った時に高度な自動インデントを行う 
 set smartindent 
 "行番号を表示する 
