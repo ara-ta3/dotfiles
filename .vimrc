@@ -8,6 +8,7 @@ set showmatch
 set enc=utf-8
 set expandtab
 set autoindent
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
