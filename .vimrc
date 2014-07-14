@@ -1,3 +1,6 @@
+if $SHELL =~ 'bin/fish'
+    set shell=/bin/sh
+endif
 " 新しい行を作った時に高度な自動インデントを行う 
 set smartindent 
 "行番号を表示する 
@@ -110,6 +113,7 @@ Bundle 'ref.vim'
 Bundle 'neocomplcache'
 Bundle 'EnhCommentify.vim'
 Bundle 'aharisu/vim_goshrepl'
+Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'elzr/vim-json'
@@ -131,9 +135,9 @@ filetype plugin indent on     " required!
  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
  xmap <C-k>     <Plug>(neosnippet_expand_target)
 " SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)"
-            \: pumvisible() ? "\<C-n>" : "\<TAB>"
+"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"            \ "\<Plug>(neosnippet_expand_or_jump)"
+"            \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
             \ "\<Plug>(neosnippet_expand_or_jump)"
             \: "\<TAB>"
