@@ -107,18 +107,17 @@ Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle "mattn/emmet-vim"
-Bundle 'ref.vim'
-Bundle 'neocomplcache'
-Bundle 'EnhCommentify.vim'
-Bundle 'aharisu/vim_goshrepl'
-Bundle 'Shougo/neocomplete'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'elzr/vim-json'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'vim-scripts/JavaScript-Indent'
+Plugin 'scrooloose/nerdtree'
+Plugin "mattn/emmet-vim"
+Plugin 'ref.vim'
+Plugin 'EnhCommentify.vim'
+Plugin 'aharisu/vim_goshrepl'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'elzr/vim-json'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/JavaScript-Indent'
 
 call vundle#end()
 filetype plugin indent on     " required!
