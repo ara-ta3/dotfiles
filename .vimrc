@@ -108,7 +108,7 @@ Plugin 'gmarik/Vundle.vim'
 "
 " original repos on github
 Plugin 'scrooloose/nerdtree'
-Plugin "mattn/emmet-vim"
+Plugin 'mattn/emmet-vim'
 Plugin 'ref.vim'
 Plugin 'EnhCommentify.vim'
 Plugin 'aharisu/vim_goshrepl'
