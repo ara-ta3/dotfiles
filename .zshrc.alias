@@ -14,5 +14,6 @@ alias gcm='git commit'
 alias gcmm='git commit -m'
 alias gs='git status'
 alias gd='git diff'
+alias git-mergeorigin='git merge origin/master'
 
 alias phpunit="phpunit --colors"

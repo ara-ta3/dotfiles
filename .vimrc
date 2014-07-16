@@ -1,6 +1,5 @@
-if $SHELL =~ 'bin/fish'
-    set shell=/bin/sh
-endif
+" zshの読み込みに時間がかかるためbashに変更
+set shell=/bin/bash
 " 新しい行を作った時に高度な自動インデントを行う 
 set smartindent 
 "行番号を表示する 
@@ -11,6 +10,7 @@ set showmatch
 set enc=utf-8
 set expandtab
 set autoindent
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
@@ -99,11 +99,11 @@ set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 " @see also http://qiita.com/1987yama3/items/1caa0e167912a51ae9cc
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=~/.vim/vundle.git
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
@@ -120,6 +120,7 @@ Bundle 'elzr/vim-json'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'vim-scripts/JavaScript-Indent'
 
+call vundle#end()
 filetype plugin indent on     " required!
 "
 " Brief help
