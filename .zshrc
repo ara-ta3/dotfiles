@@ -10,4 +10,4 @@
 # colorstyle (ls)
   zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-export WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>+'
+export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
