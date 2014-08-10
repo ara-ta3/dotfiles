@@ -118,6 +118,7 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'elzr/vim-json'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'evidens/vim-twig'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -148,3 +149,5 @@ if has('conceal')
 endif
 
 call pathogen#infect()
+
+set backspace=indent,eol,start
