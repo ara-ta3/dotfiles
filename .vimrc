@@ -151,3 +151,8 @@ endif
 call pathogen#infect()
 
 set backspace=indent,eol,start
+
+let g:pdv_cfg_Copyright = ""
+let g:pdv_cfg_Author = "Arata Tanaka"
+let g:pdv_cfg_License = ""
+
