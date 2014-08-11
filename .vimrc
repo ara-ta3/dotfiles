@@ -174,6 +174,7 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'claco/jasmine.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'evidens/vim-twig'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -204,3 +205,10 @@ if has('conceal')
 endif
 
 call pathogen#infect()
+
+set backspace=indent,eol,start
+
+let g:pdv_cfg_Copyright = ""
+let g:pdv_cfg_Author = "Arata Tanaka"
+let g:pdv_cfg_License = ""
+
