@@ -9,3 +9,5 @@
   zstyle ':completion:*' menu select true
 # colorstyle (ls)
   zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
