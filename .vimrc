@@ -20,6 +20,12 @@ nnoremap < gT
 nnoremap > gt
 nnoremap <C-e> :NERDTreeToggle<CR>
 
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
+
+
 " imap
 imap jj <Esc>
 
@@ -83,6 +89,9 @@ inoremap <expr><C-e> neocomplcache#cancel_popup()
 " *
 "*/
 "を追加する plugin
+let g:pdv_cfg_Copyright = ""
+let g:pdv_cfg_Author = "a-tanaka"
+let g:pdv_cfg_License = ""
 inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-D> :call PhpDocSingle()<CR>
 vnoremap <C-D> :call PhpDocRange()<CR>
