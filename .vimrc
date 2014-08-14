@@ -31,6 +31,8 @@ autocmd FileType php set dictionary=~/dotfiles/.vim/dictionary/PHP.dict
 " scalaの補完
 autocmd FileType scala set dictionary=~/dotfiles/.vim/dictionary/scala.dict
 
+autocmd FileType scm set filetype=scheme
+
 " coffee script
 " vimにcoffeeファイルタイプを認識させる
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
@@ -175,6 +177,11 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'claco/jasmine.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'evidens/vim-twig'
+Plugin 'amdt/vim-niji'
+
+" Gauche
+"let g:neocomplcache_keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
+vmap <CR> <Plug>(gosh_repl_send_block)
 
 call vundle#end()
 filetype plugin indent on     " required!
