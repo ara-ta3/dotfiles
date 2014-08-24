@@ -2,3 +2,4 @@
 .vim/.netrwhist
 !/.vim/bundle/Vundle.vim
 /.vim/bundle
+/.atom/compile-cache
