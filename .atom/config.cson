@@ -6,8 +6,10 @@
   'fontSize': 16
 'core':
   'themes': [
-    'atom-dark-ui'
-    'atom-dark-syntax'
+    'seti-ui'
+    'monokai'
   ]
 'metrics':
   'userId': 'a4b0fba4523395c12436228eccf1b3facf6455d1'
+'open-terminal-here':
+  'app': 'iTerm.app'
