@@ -1,17 +1,25 @@
-# standard prompt
-PROMPT="[%F{cyan}%n%f@%F{cyan}%M%f] %{${fg[yellow]}%}%~%{${reset_color}%}
+# git branch
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
+zstyle ':vcs_info:git:*' check-for-changes true
+# zstyle ':vcs_info:git:*' formats '(%s)-[%b]' '%c' '$u'
+zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
+# zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+GITPROMPT="(git)%1(v|%F{green}%1v%f|)%
+"
+# prompt setting
+
+PROMPT="[%F{cyan}%n%f@%F{cyan}%M%f]$GITPROMPT
 %(?.%{$fg[green]%}.%{$fg[cyan]%})%(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 
-# right prompt(display git branch)
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-precmd () {
-        psvar=()
-            LANG=en_US.UTF-8 vcs_info
-             [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-RPROMPT="%1(v|%F{green}%1v%f|)%"
+RPROMPT="%{${fg[yellow]}%}%~%{${reset_color}%}"
 
 # spell correction prompt
 SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
