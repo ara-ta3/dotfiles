@@ -89,7 +89,11 @@ au FileType coffee,ruby,javascript,python IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle
 
 "Color
-colorscheme elflord 
+let g:molokai_original = 1
+set t_Co=256
+syntax on
+set background=dark
+colorscheme molokai
 
 "Twigのシンタックス
 au BufRead,BufNewFile *.twig set syntax=htmldjango
@@ -187,6 +191,7 @@ Plugin 'claco/jasmine.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'evidens/vim-twig'
 Plugin 'amdt/vim-niji'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Gauche
 "let g:neocomplcache_keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
@@ -228,3 +233,13 @@ let g:pdv_cfg_Copyright = ""
 let g:pdv_cfg_Author = "Arata Tanaka"
 let g:pdv_cfg_License = ""
 
+" multiple cursors
+
+" Default mapping
+" let g:multi_cursor_next_key='<C-n>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<Esc>'
+"
+" Ctrl-p in Visual mode will remove the current virtual cursor and go back to the previous virtual cursor location. This is useful if you are trigger happy with Ctrl-n and accidentally went too far.
+" Ctrl-x in Visual mode will remove the current virtual cursor and skip to the next virtual cursor location. This is useful if you don't want the current selection to be a candidate to operate on later.
