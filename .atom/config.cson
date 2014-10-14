@@ -3,7 +3,7 @@
 'welcome':
   'showOnStartup': false
 'editor':
-  'fontSize': 16
+  'invisibles': {}
 'core':
   'themes': [
     'seti-ui'

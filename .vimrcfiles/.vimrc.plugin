@@ -30,5 +30,5 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'evidens/vim-twig'
 Plugin 'amdt/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
-
+Plugin 'fatih/vim-go'
 
