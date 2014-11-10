@@ -1,6 +1,6 @@
 {
   "name": "language-scheme",
-  "version": "1.1.1",
+  "version": "1.3.0",
   "private": false,
   "description": "A scheme syntax highlighter",
   "repository": {
@@ -18,10 +18,20 @@
     "url": "https://github.com/backjo/language-scheme/issues"
   },
   "homepage": "https://github.com/backjo/language-scheme",
-  "_id": "language-scheme@1.1.1",
+  "_id": "language-scheme@1.3.0",
   "dist": {
-    "shasum": "8107bf3b390cd1c21596548b57ef42f195958c4f"
+    "shasum": "20ab2ee8dbb74ecc862201cb9b98a1a53a1345bc"
   },
-  "_resolved": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-76061-jnlki8/package.tgz",
-  "_from": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-76061-jnlki8/package.tgz"
+  "_resolved": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6350-ssyru0/package.tgz",
+  "_from": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6350-ssyru0/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "monokai",
   "theme": "syntax",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "description": "A monokai theme",
   "repository": {
@@ -18,10 +18,20 @@
     "url": "https://github.com/kevinsawicki/monokai/issues"
   },
   "homepage": "https://github.com/kevinsawicki/monokai",
-  "_id": "monokai@0.7.0",
+  "_id": "monokai@0.8.0",
   "dist": {
-    "shasum": "675771fb5cfa4a2532412101b07ce633577e9c54"
+    "shasum": "9dfb611a8948e32a8ba7442794f3189367142743"
   },
-  "_resolved": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-19805-9sg0u/package.tgz",
-  "_from": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-19805-9sg0u/package.tgz"
+  "_resolved": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6318-1k3e7wg/package.tgz",
+  "_from": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6318-1k3e7wg/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
