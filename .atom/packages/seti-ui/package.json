@@ -1,7 +1,7 @@
 {
   "name": "seti-ui",
   "theme": "ui",
-  "version": "0.3.3",
+  "version": "0.3.6",
   "description": "A dark colored UI theme for Atom with custom file icons.",
   "license": "MIT",
   "repository": {
@@ -17,10 +17,20 @@
     "url": "https://github.com/jesseweed/seti-ui/issues"
   },
   "homepage": "https://github.com/jesseweed/seti-ui",
-  "_id": "seti-ui@0.3.3",
+  "_id": "seti-ui@0.3.6",
   "dist": {
-    "shasum": "2eb5a5ca28e10ac99fd04d8df8f02919840a6810"
+    "shasum": "c37f261f51afc6d4732f5cf80b1cab25c39c5760"
   },
-  "_resolved": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-22321-cfo7pg/package.tgz",
-  "_from": "/var/folders/09/snr_5kg14rb6j7d6_kbj66qm0000gn/T/d-114724-22321-cfo7pg/package.tgz"
+  "_resolved": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6334-1sp59q3/package.tgz",
+  "_from": "/private/var/folders/xg/y_3nlcpd55l1qd4s93mvhnv1nzs8fp/T/d-114106-6334-1sp59q3/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
