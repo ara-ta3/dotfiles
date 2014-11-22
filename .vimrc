@@ -7,6 +7,11 @@ if filereadable(expand('$HOME/dotfiles/.vimrcfiles/.vimrc.plugin'))
     if filereadable(expand('$HOME/dotfiles/.vimrcfiles/.vimrc.plugin.detail'))
         source $HOME/dotfiles/.vimrcfiles/.vimrc.plugin.detail
     endif
+
+    if filereadable(expand('$HOME/dotfiles/.vimrcfiles/plugins/vimrc.neocomplete'))
+        source $HOME/dotfiles/.vimrcfiles/plugins/vimrc.neocomplete
+    endif
+
 endif
 
 if filereadable(expand('$HOME/dotfiles/.vimrcfiles/.vimrc.colors'))

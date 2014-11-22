@@ -32,3 +32,4 @@ Plugin 'amdt/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'fatih/vim-go'
 
+call vundle#end()
