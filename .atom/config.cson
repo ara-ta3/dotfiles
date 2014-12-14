@@ -12,5 +12,9 @@
     'userId': 'a4b0fba4523395c12436228eccf1b3facf6455d1'
   'open-terminal-here':
     'app': 'iTerm.app'
-  'editor':
-    'invisibles': {}
+'exception-reporting':
+  'userId': '0ce03813-87ca-892c-5388-84c797b1b616'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': 'a4b0fba4523395c12436228eccf1b3facf6455d1'
