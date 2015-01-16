@@ -3,3 +3,4 @@
 !/.vim/bundle/Vundle.vim
 /.vim/bundle
 /.atom/compile-cache
+.*.swp
