@@ -12,6 +12,10 @@ if filereadable(expand('$HOME/dotfiles/.vimrcfiles/.vimrc.plugin'))
         source $HOME/dotfiles/.vimrcfiles/plugins/vimrc.neocomplete
     endif
 
+    if filereadable(expand('$HOME/dotfiles/.vimrcfiles/plugins/vimrc.git'))
+        source $HOME/dotfiles/.vimrcfiles/plugins/vimrc.git
+    endif
+
 endif
 
 if filereadable(expand('$HOME/dotfiles/.vimrcfiles/.vimrc.colors'))

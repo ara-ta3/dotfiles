@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
@@ -32,4 +32,5 @@ Plugin 'amdt/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'fatih/vim-go'
 
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
