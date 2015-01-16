@@ -31,6 +31,7 @@ Plugin 'evidens/vim-twig'
 Plugin 'amdt/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'fatih/vim-go'
+Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-fugitive'
 call vundle#end()
