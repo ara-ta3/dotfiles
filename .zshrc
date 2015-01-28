@@ -11,3 +11,6 @@
   zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
+export TERM=xterm-color
+export CLICOLOR=1
+export LSCOLORS=CxGxcxdxCxegedabagacad
