@@ -1,4 +1,4 @@
-if [ `which bre > /dev/null;echo $?` -ne 0 ]; then
+if [ `which brew > /dev/null;echo $?` -ne 0 ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 c=Caskroom/cask/
@@ -7,7 +7,7 @@ c=Caskroom/cask/
 brew install caskroom/cask/brew-cask
 
 # libs
-brew install git homebrew/php/php56 ruby scala python3 python nodejs gauche go
+brew install git homebrew/php/php56 ruby scala python3 python nodejs gauche go zsh
 
 #Caskroom
 brew install ${c}java \
@@ -19,7 +19,11 @@ brew install ${c}java \
     ${c}google-japanese-ime \
     ${c}atom \
     ${c}skype \
-    ${c}fraise \
-    ${c}moom
+    ${c}fraise
 
+chsh -s /bin/zsh
 
+if [ -d $HOME/dotfiles ]; then
+    make -C $HOME/dotfiles install-vim
+    make -C $HOME/dotfiles install-zsh
+fi
