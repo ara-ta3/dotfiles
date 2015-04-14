@@ -20,5 +20,6 @@ brew install ${c}java \
     ${c}atom \
     ${c}skype \
     ${c}fraise \
+    ${c}moom
 
 
