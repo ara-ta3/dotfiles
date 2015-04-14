@@ -21,6 +21,7 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'elzr/vim-json'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'derekwyatt/vim-scala'
 " syntax + 自動compile
 " js BDDツール
 " indentの深さに色を付ける
@@ -32,6 +33,7 @@ Plugin 'amdt/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
+Plugin 'leafgarland/typescript-vim'
 
 Plugin 'tpope/vim-fugitive'
 call vundle#end()

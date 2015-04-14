@@ -7,6 +7,8 @@ autocmd FileType scala set dictionary=~/dotfiles/.vim/dictionary/scala.dict
 
 autocmd FileType scm set filetype=scheme
 
+autocmd FileType ts set filetype=typescript
+
 " coffee script
 " vimにcoffeeファイルタイプを認識させる
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
