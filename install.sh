@@ -7,6 +7,7 @@ if [ ! -f $HOME/dotfiles/.vim/colors/molokai.git ]; then
     git clone https://github.com/tomasr/molokai.git $HOME/dotfiles/.vim/colors/molokai.git
 fi
 
+rm -rf ${HOME}/.vim
 ln -sf ${HOME}/dotfiles/.vim ${HOME}/.vim
 ln -sf ${HOME}/dotfiles/.vimrc ${HOME}/.vimrc
 
