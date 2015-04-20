@@ -36,4 +36,5 @@ Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'yoppi/fluentd.vim'
 call vundle#end()
