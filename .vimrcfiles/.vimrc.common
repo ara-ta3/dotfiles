@@ -26,8 +26,6 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap < gT
 nnoremap > gt
 nnoremap <C-e> :NERDTreeToggle<CR>
-nnoremap <C-w><C-w> :wq<CR>
-nnoremap <C-w> :w<CR>
 nnoremap <C-t> :set filetype=
 
 nnoremap j gj

@@ -1,27 +1,41 @@
-" 補完
-" phpの補完
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType php set dictionary=~/dotfiles/.vim/dictionary/PHP.dict
-" scalaの補完
-autocmd FileType scala set dictionary=~/dotfiles/.vim/dictionary/scala.dict
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/coffee.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/coffee.vimrc
+endif
 
-autocmd FileType scm set filetype=scheme
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/conffiles.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/conffiles.vimrc
+endif
 
-" mongodb
-au BufRead,BufNewFile,BufReadPre mongo*.conf set filetype=yaml
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/go.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/go.vimrc
+endif
 
-" typescript
-autocmd FileType ts set filetype=typescript
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/js.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/js.vimrc
+endif
 
-" coffee script
-" vimにcoffeeファイルタイプを認識させる
-au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-" インデントを設定
-autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/php.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/php.vimrc
+endif
 
-au BufRead,BufNewFile,BufReadPre *.conf set filetype=conf
 
-autocmd FileType conf set shiftwidth=2
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/scala.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/scala.vimrc
+endif
+
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/scheme.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/scheme.vimrc
+endif
+
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/twig.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/twig.vimrc
+endif
+
+if filereadable(expand('$HOME/dotfiles/.vimrcfiles/syntax/typescript.vimrc'))
+    source $HOME/dotfiles/.vimrcfiles/syntax/typescript.vimrc
+endif
+
+syntax on
 
 " taglistの設定 coffeeを追加
 " let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
@@ -51,8 +65,5 @@ autocmd FileType conf set shiftwidth=2
 "JasmineSetting()
 
 "Twigのシンタックス
-au BufRead,BufNewFile *.twig set syntax=htmldjango
-syntax on
 
 " Go Syntax
-au FileType go nmap <Leader>s <Plug>(go-implements)
