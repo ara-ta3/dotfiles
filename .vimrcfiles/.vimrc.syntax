@@ -10,11 +10,18 @@ autocmd FileType scm set filetype=scheme
 " mongodb
 au BufRead,BufNewFile,BufReadPre mongo*.conf set filetype=yaml
 
+" typescript
+autocmd FileType ts set filetype=typescript
+
 " coffee script
 " vimにcoffeeファイルタイプを認識させる
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 " インデントを設定
 autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
+
+au BufRead,BufNewFile,BufReadPre *.conf set filetype=conf
+
+autocmd FileType conf set shiftwidth=2
 
 " taglistの設定 coffeeを追加
 " let g:tlist_coffee_settings = 'coffee;f:function;v:variable'

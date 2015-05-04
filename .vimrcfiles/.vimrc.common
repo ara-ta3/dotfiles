@@ -14,18 +14,26 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
+set hlsearch
+
+" スペース可視化
+set list
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
+set backspace=indent,eol,start
 
 " nnoremap
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap < gT
 nnoremap > gt
 nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-w><C-w> :wq<CR>
+nnoremap <C-w> :w<CR>
+nnoremap <C-t> :set filetype=
 
 nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
-
 
 " imap
 imap jj <Esc>
@@ -46,9 +54,4 @@ hi IndentGuidesEven ctermbg=237
 au FileType coffee,ruby,javascript,python IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle
 
-" スペース可視化
-set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
-
-set backspace=indent,eol,start
