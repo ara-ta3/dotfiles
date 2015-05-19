@@ -22,12 +22,7 @@ Plugin 'elzr/vim-json'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'derekwyatt/vim-scala'
-" syntax + 自動compile
-" js BDDツール
-" indentの深さに色を付ける
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'claco/jasmine.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'evidens/vim-twig'
 Plugin 'vim-scripts/vim-niji'
 Plugin 'terryma/vim-multiple-cursors'
@@ -37,4 +32,5 @@ Plugin 'leafgarland/typescript-vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'yoppi/fluentd.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
