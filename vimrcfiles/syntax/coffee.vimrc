@@ -1,2 +1,3 @@
-au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab tabstop=2 softtabstop=2
+
