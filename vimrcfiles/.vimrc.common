@@ -32,9 +32,11 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
+nnoremap <C-a> :NERDTreeFind<CR>
 
 " imap
 imap jj <Esc>
+imap <C-a> <Esc>0i
 
 "------------------------------------
 " indent_guides
