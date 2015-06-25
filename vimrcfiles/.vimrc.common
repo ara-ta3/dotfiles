@@ -27,12 +27,13 @@ nnoremap < gT
 nnoremap > gt
 nnoremap <C-e> :NERDTreeToggle<CR>
 nnoremap <C-t> :set filetype=
-
 nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 nnoremap <C-a> :NERDTreeFind<CR>
+nnoremap q :<C-u>q<CR>
+
 
 " imap
 imap jj <Esc>
