@@ -7,7 +7,17 @@ c=Caskroom/cask/
 brew install caskroom/cask/brew-cask
 
 # libs
-brew install git homebrew/php/php56 ruby scala python3 python nodejs gauche go zsh
+brew install git \
+    homebrew/php/php56 \
+    ruby \
+    scala \
+    python3 \
+    python \
+    nodejs \
+    gauche \
+    go \
+    zsh \
+    peco
 
 #Caskroom
 brew install ${c}java \
