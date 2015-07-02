@@ -1,0 +1,4 @@
+set-alias:
+	git config --global alias.br branch
+	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
+	git config --global alias.log graph

@@ -6,3 +6,6 @@ install-zsh:
 
 install-mac:
 	@sh mac/install.sh
+
+set-git-config:
+	$(MAKE) -C gitconfig set-alias
