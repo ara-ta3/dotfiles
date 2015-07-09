@@ -7,9 +7,25 @@
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # zstyle
-  zstyle ':completion:*' menu select true
+zstyle ':completion:*' menu select true
 # colorstyle (ls)
-  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+function peco-select-history() {
+  local tac
+  if which tac > /dev/null; then
+    tac="tac"
+  else
+    tac="tail -r"
+  fi
+  BUFFER=$(\history -n 1 | \
+    eval $tac | \
+    peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
 
 export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
 export TERM=xterm-color
