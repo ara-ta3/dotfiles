@@ -16,6 +16,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gmergeorigin='git merge origin/master'
 alias gf="git fetch"
+alias git-get="ghq get"
 
 alias phpunit="phpunit --colors"
 alias phead='ps aux|head -n 1'
