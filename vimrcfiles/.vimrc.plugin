@@ -33,4 +33,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yoppi/fluentd.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'vim-jp/vim-go-extra'
+Plugin 'kana/vim-filetype-haskell'
 call vundle#end()
