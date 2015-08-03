@@ -35,4 +35,6 @@ Plugin 'yoppi/fluentd.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mattn/webapi-vim'
 Plugin 'heavenshell/vim-kotoha'
+Plugin 'vim-jp/vim-go-extra'
+Plugin 'kana/vim-filetype-haskell'
 call vundle#end()
