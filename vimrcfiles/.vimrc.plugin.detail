@@ -51,6 +51,10 @@ let g:pdv_cfg_Copyright = ""
 let g:pdv_cfg_Author = "Arata Tanaka"
 let g:pdv_cfg_License = ""
 
+" vim-kotoha
+set omnifunc=kotoha#complete
+nnoremap <C-k> :KotohaTag -query=
+
 " multiple cursors
 
 " Default mapping

@@ -33,4 +33,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yoppi/fluentd.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mattn/webapi-vim'
+Plugin 'heavenshell/vim-kotoha'
 call vundle#end()
