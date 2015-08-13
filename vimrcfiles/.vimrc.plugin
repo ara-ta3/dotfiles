@@ -37,4 +37,6 @@ Plugin 'mattn/webapi-vim'
 Plugin 'heavenshell/vim-kotoha'
 Plugin 'vim-jp/vim-go-extra'
 Plugin 'kana/vim-filetype-haskell'
+Plugin 'thinca/vim-quickrun'
+Plugin 'puppetlabs/puppet-syntax-vim'
 call vundle#end()
