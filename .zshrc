@@ -13,6 +13,7 @@ zstyle ':completion:*' menu select true
 # colorstyle (ls)
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+fpath=($HOME/.zsh.d/zsh-completions $fpath)
 
 # 履歴ファイルの保存先
 export HISTFILE=${HOME}/.zsh_history

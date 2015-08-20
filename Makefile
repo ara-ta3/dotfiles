@@ -2,7 +2,10 @@ install-vim:
 	@sh install.sh
 
 install-zsh-lib:
+	mkdir -p ${HOME}/.zsh.d
 	git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh.d/zsh-syntax-highlighting
+	git clone git://github.com/zsh-users/zsh-completions.git ${HOME}/.zsh.d/zsh-completions
+	curl -L https://raw.github.com/felixr/docker-zsh-completion/master/_docker > ${HOME}/.zsh.d/zsh-completions/src/_docker
 
 
 install-zsh:install-zsh-lib
