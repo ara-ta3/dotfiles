@@ -2,6 +2,7 @@
 [ -f ~/dotfiles/.zshrc.prompt ] && source ~/dotfiles/.zshrc.prompt
 [ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
+[ -f ~/dotfiles/zshrc.npm.completion ] && source ~/dotfiles/zshrc.npm.completion
 [ -f ~/dotfiles/zshrc.func ] && source ~/dotfiles/zshrc.func
 [ -f ~/dotfiles/zshrc.peco ] && source ~/dotfiles/zshrc.peco
 [ -f ~/dotfiles/.zshrc.local ] && source ~/dotfiles/.zshrc.local
