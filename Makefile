@@ -1,7 +1,11 @@
 install-vim:
 	@sh install.sh
 
-install-zsh:
+install-zsh-lib:
+	git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh.d/zsh-syntax-highlighting
+
+
+install-zsh:install-zsh-lib
 	ln -sf ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 
 install-mac:
