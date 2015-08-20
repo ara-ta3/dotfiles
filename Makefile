@@ -11,6 +11,6 @@ set-git-config:
 	$(MAKE) -C gitconfig set-alias
 
 install-bash:
-	wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh \
-		-o ~/git-prompt.sh
-	mv -f ${HOME}/dotfiles/bashrc ${HOME}/.bashrc
+	curl --output ${HOME}/git-prompt.sh \
+		--url https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+	cp -f ${HOME}/dotfiles/bashrc ${HOME}/.bashrc
