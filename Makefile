@@ -6,6 +6,7 @@ install-zsh-lib:
 	git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh.d/zsh-syntax-highlighting
 	git clone git://github.com/zsh-users/zsh-completions.git ${HOME}/.zsh.d/zsh-completions
 	curl -L https://raw.github.com/felixr/docker-zsh-completion/master/_docker > ${HOME}/.zsh.d/zsh-completions/src/_docker
+	curl -L https://github.com/github/hub/blob/master/etc/hub.zsh_completion > ${HOME}/.zsh.d/zsh-completions/src/_hub
 
 
 install-zsh:install-zsh-lib
