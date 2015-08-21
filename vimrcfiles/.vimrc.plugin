@@ -39,4 +39,5 @@ Plugin 'vim-jp/vim-go-extra'
 Plugin 'kana/vim-filetype-haskell'
 Plugin 'thinca/vim-quickrun'
 Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'hdima/python-syntax'
 call vundle#end()

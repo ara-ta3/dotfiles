@@ -1,3 +1,6 @@
+" python syntax
+let python_highlight_all = 1
+
 " QuickRun
 let g:quickrun_config = {
             \   "_" : {
