@@ -41,4 +41,6 @@ Plugin 'thinca/vim-quickrun'
 Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'hdima/python-syntax'
 Plugin 'xsbeats/vim-blade'
+Plugin 'rhysd/github-complete.vim'
+Plugin 'junegunn/vim-emoji'
 call vundle#end()
