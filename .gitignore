@@ -5,3 +5,4 @@
 /.vim/bundle
 /.atom/compile-cache
 .*.swp
+.DS_Store
