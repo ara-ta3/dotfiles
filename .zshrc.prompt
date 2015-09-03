@@ -14,11 +14,11 @@ GITPROMPT="%1(v|%F{yellow}%1v%f|)%
 "
 # prompt setting
 
-PROMPT="[%F{cyan}%n%f@%F{cyan}%M%f] %{${fg[green]}%}%~%{${reset_color}%}
-%(?.%{$fg[green]%}.%{$fg[cyan]%})%(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
+PROMPT="[%F{magenta}%n%f@%F{magenta}%M%f] %{${fg[green]}%}%~%{${reset_color}%}
+%(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$GITPROMPT
 
 # spell correction prompt
-SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
+SPROMPT="%{$fg[yellow]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[yellow]%}かな? [そう!(y), 違う!(n),a,e]: ${reset_color}"
 
