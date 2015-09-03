@@ -10,15 +10,15 @@ precmd () {
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-GITPROMPT="%1(v|%F{yellow}%1v%f|)%
+GITPROMPT="%1(v|%F{magenta}%1v%f|)%
 "
 # prompt setting
 
-PROMPT="[%F{magenta}%n%f@%F{magenta}%M%f] %{${fg[green]}%}%~%{${reset_color}%}
+PROMPT="[%F{yellow}%n%f@%F{yellow}%M%f] %{${fg[green]}%}%~%{${reset_color}%}
 %(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$GITPROMPT
 
 # spell correction prompt
-SPROMPT="%{$fg[yellow]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[yellow]%}かな? [そう!(y), 違う!(n),a,e]: ${reset_color}"
+SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(y), 違う!(n),a,e]: ${reset_color}"
 
