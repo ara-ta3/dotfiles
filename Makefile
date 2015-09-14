@@ -1,6 +1,7 @@
 install-vim:
-	@test -f $HOME/dotfiles/.vim/bundle/Vundle.vim || git clone https://github.com/gmarik/Vundle.vim.git $HOME/dotfiles/.vim/bundle/Vundle.vim
-	@test -f $HOME/dotfiles/.vim/colors/molokai.git || git clone https://github.com/tomasr/molokai.git $HOME/dotfiles/.vim/colors/molokai.git
+	@test -d ${HOME}/dotfiles/.vim/bundle/Vundle.vim  || git clone https://github.com/gmarik/Vundle.vim.git ${HOME}/dotfiles/.vim/bundle/Vundle.vim
+	@(test -f ${HOME}/dotfiles/.vim/colors/molokai.vim && test -d ${HOME}/dotfiles/.vim/colors/molokai.git) || git clone https://github.com/tomasr/molokai.git ${HOME}/dotfiles/.vim/colors/molokai.git
+	@mv ${HOME}/dotfiles/.vim/colors/molokai.git/colors/molokai.vim ${HOME}/dotfiles/.vim/colors/molokai.git
 	@rm -rf ${HOME}/.vim
 	@ln -sf ${HOME}/dotfiles/.vim ${HOME}/.vim
 	@ln -sf ${HOME}/dotfiles/.vimrc ${HOME}/.vimrc
