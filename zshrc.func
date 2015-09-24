@@ -6,7 +6,14 @@ function g-checkout-peco () {
     git checkout $(git branch -a|grep -v "*"|grep -v "origin/master"|sed -e 's/remotes\///g'|peco|sed -e 's/origin\///g')
 }
 
-function p-docker () {
+function run-docker () {
     docker run -i -t `docker images |grep -v REPOSITORY|peco |awk '{print $1 ":" $2}'` /bin/bash
 }
 
+function run-remote-docker () {
+    docker run -i -t `docker search tarata|grep -v NAME|peco |awk '{print $1}'` /bin/bash
+}
+
+function pull-remote-docker () {
+    docker pull `docker search tarata|grep -v NAME|peco |awk '{print $1}'`
+}
