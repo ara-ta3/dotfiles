@@ -22,4 +22,4 @@ alias phpunit="phpunit --colors"
 alias phead='ps aux|head -n 1'
 alias -g p='|peco'
 alias -g gr='|xargs grep --color'
-alias -g dr='docker run -i -t '
+alias vimr='vim -R'
