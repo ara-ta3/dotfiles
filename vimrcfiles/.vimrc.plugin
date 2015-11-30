@@ -42,4 +42,5 @@ Plugin 'xsbeats/vim-blade'
 Plugin 'rhysd/github-complete.vim'
 Plugin 'junegunn/vim-emoji'
 Plugin 'isRuslan/vim-es6'
+Plugin 'ara-ta3/ctrlp.vim'
 call vundle#end()
