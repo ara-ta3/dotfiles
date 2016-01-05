@@ -1,9 +1,32 @@
+# git branch
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
+zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
+precmd () {
+    psvar=()
+    LANG=ja_JP.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+GITPROMPT="%1(v|%F{magenta}%1v%f|)%
+"
+# prompt setting
+
+PROMPT="[%F{yellow}%n%f@%F{yellow}%m %D %T%f] %{${fg[green]}%}%~%{${reset_color}%}
+%(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+
+RPROMPT=$GITPROMPT
+
+# spell correction prompt
+SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(y), 違う!(n),a,e]: ${reset_color}"
+
 # mysql prompt
 m_color0=$'\e[1;36m'
 m_color1=$'\e[1;33m'
 m_clear=$'\e[0m'
 export MYSQL_PS1="$m_color0(\d)$m_color1> $m_clear"
-## mysql prompt
 ## mysql client user
 typeset -A mysql_prompt_style_client_user
 mysql_prompt_style_client_user=(

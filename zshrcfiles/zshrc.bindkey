@@ -1,3 +1,9 @@
+bindkey "\e[Z" reverse-menu-complete
+bindkey "^h" backward-word
+bindkey "^l" forward-word
+
+
+# for peco
 function peco-select-history() {
   local tac
   if which tac > /dev/null; then
@@ -5,9 +11,7 @@ function peco-select-history() {
   else
     tac="tail -r"
   fi
-  BUFFER=$(\history -n 1|sort|uniq | \
-    eval $tac | \
-    peco --query "$LBUFFER")
+  BUFFER=$(\history -n 1| eval $tac | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }

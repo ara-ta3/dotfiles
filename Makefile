@@ -8,9 +8,8 @@ install-vim:
 	@vim +:PluginInstall +:qa
 
 install-zsh-lib:
+	mkdir -p ${HOME}/.zplug
 	mkdir -p ${HOME}/.zsh.d
-	test -f ${HOME}/.zsh.d/zsh-syntax-highlighting      || git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh.d/zsh-syntax-highlighting
-	test -f ${HOME}/.zsh.d/zsh-completions              || git clone git://github.com/zsh-users/zsh-completions.git ${HOME}/.zsh.d/zsh-completions
 	test -f ${HOME}/.zsh.d/zsh-completions/src/_docker  || curl -L https://raw.github.com/felixr/docker-zsh-completion/master/_docker > ${HOME}/.zsh.d/zsh-completions/src/_docker
 	test -f ${HOME}/.zsh.d/zsh-completions/src/_hub     || curl -L https://github.com/github/hub/blob/master/etc/hub.zsh_completion > ${HOME}/.zsh.d/zsh-completions/src/_hub
 
