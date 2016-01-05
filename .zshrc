@@ -6,7 +6,7 @@
 [ -f ~/dotfiles/zshrc.func ] && source ~/dotfiles/zshrc.func
 [ -f ~/dotfiles/zshrc.peco ] && source ~/dotfiles/zshrc.peco
 [ -f ~/dotfiles/.zshrc.local ] && source ~/dotfiles/.zshrc.local
-[ -f ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/dotfiles/.zshrc.autoload ] && source ~/dotfiles/zshrcfiles/zshrc.zplug
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # zstyle
