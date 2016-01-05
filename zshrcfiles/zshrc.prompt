@@ -7,14 +7,14 @@ zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
 zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
 precmd () {
     psvar=()
-    LANG=en_US.UTF-8 vcs_info
+    LANG=ja_JP.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 GITPROMPT="%1(v|%F{magenta}%1v%f|)%
 "
 # prompt setting
 
-PROMPT="[%F{yellow}%n%f@%F{yellow}%M%f] %{${fg[green]}%}%~%{${reset_color}%}
+PROMPT="[%F{yellow}%n%f@%F{yellow}%m %D %T%f] %{${fg[green]}%}%~%{${reset_color}%}
 %(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$GITPROMPT
