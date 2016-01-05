@@ -1,0 +1,1 @@
+bindkey "\e[Z" reverse-menu-complete
