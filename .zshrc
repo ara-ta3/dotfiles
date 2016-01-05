@@ -1,4 +1,5 @@
 [ -f ~/dotfiles/.zshrc.autoload ] && source ~/dotfiles/.zshrc.autoload
+[ -f ~/dotfiles/zshrcfiles/zshrc.bindkey ] && source ~/dotfiles/zshrcfiles/zshrc.bindkey
 [ -f ~/dotfiles/.zshrc.prompt ] && source ~/dotfiles/.zshrc.prompt
 [ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
