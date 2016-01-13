@@ -33,10 +33,9 @@ nnoremap <Down> gj
 nnoremap <Up>   gk
 nnoremap <C-a> :NERDTreeFind<CR>
 nnoremap q :<C-u>q<CR>
+nnoremap W :<C-u>w<CR>
 
 " コマンドラインモード
-cnoremap Q q
-cnoremap W w
 
 " imap
 imap jj <Esc>
