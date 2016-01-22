@@ -43,4 +43,8 @@ Plugin 'rhysd/github-complete.vim'
 Plugin 'junegunn/vim-emoji'
 Plugin 'isRuslan/vim-es6'
 Plugin 'ara-ta3/ctrlp.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'easymotion/vim-easymotion'
+
 call vundle#end()
