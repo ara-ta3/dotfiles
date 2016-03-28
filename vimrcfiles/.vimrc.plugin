@@ -46,7 +46,6 @@ Plugin 'ara-ta3/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'aharisu/vim-gdev'
 Plugin 'Shougo/vimproc.vim', {
             \ 'build' : {
             \     'windows' : 'tools\\update-dll-mingw',
