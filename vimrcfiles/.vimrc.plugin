@@ -55,5 +55,6 @@ Plugin 'Shougo/vimproc.vim', {
             \     'unix' : 'gmake',
             \    },
             \ }
+Plugin 'sjl/badwolf'
 
 call vundle#end()
