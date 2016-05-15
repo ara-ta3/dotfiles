@@ -68,9 +68,11 @@ let g:pdv_cfg_Copyright = ""
 let g:pdv_cfg_Author = "Arata Tanaka"
 let g:pdv_cfg_License = ""
 
-" vim-kotoha
-set omnifunc=kotoha#complete
-nnoremap <C-k> :KotohaTag -query=
+" vim-tags
+
+let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -f .tags -R . 2>/dev/null"
+set tags+=.tags
+nnoremap <C-t> g<C-t>
 
 " multiple cursors
 

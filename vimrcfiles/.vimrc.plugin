@@ -57,5 +57,6 @@ Plugin 'Shougo/vimproc.vim', {
 Plugin 'sjl/badwolf'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'derekwyatt/vim-sbt'
+Plugin 'szw/vim-tags'
 
 call vundle#end()
