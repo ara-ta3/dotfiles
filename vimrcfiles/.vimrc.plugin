@@ -20,7 +20,6 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'elzr/vim-json'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'evidens/vim-twig'
 Plugin 'vim-scripts/vim-niji'
@@ -33,7 +32,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'yoppi/fluentd.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mattn/webapi-vim'
-Plugin 'heavenshell/vim-kotoha'
 Plugin 'vim-jp/vim-go-extra'
 Plugin 'kana/vim-filetype-haskell'
 Plugin 'puppetlabs/puppet-syntax-vim'
@@ -56,5 +54,7 @@ Plugin 'Shougo/vimproc.vim', {
             \    },
             \ }
 Plugin 'sjl/badwolf'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-sbt'
 
 call vundle#end()
