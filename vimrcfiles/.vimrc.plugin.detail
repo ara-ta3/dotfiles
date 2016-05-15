@@ -72,7 +72,6 @@ let g:pdv_cfg_License = ""
 
 let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -f .tags -R . 2>/dev/null"
 set tags+=.tags
-nnoremap <C-t> g<C-t>
 
 " multiple cursors
 
