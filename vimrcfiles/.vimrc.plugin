@@ -58,5 +58,6 @@ Plugin 'sjl/badwolf'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'szw/vim-tags'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
