@@ -9,13 +9,18 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-" Define dictionary.
+let g:neocomplete#enable_underbar_completion = 1
+let g:neocomplete#enable_camel_case_completion  =  1
+let g:neocomplete#auto_completion_start_length = 2
+" ポップアップメニューで表示される候補の数
+let g:neocomplete#max_list = 20
+let s:neco_dicts_dir = $HOME . '/.vim/dictionary'
 let g:neocomplete#sources#dictionary#dictionaries = {
             \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
+            \ 'java': s:neco_dicts_dir . '/java.dict',
+            \ 'scala': s:neco_dicts_dir . '/scala.dict',
+            \ 'php': s:neco_dicts_dir . '/php.dict',
             \ }
-
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
