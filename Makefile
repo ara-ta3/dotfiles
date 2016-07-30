@@ -4,6 +4,9 @@ current_dir=$(shell pwd)
 #####           vim           #####
 ###################################
 
+install-nvim: $(HOME)/.config install-vim
+	ln -s $(HOME)/.vim $</nvim
+
 install-vim: clean \
 	$(HOME)/.config/dein.vim \
 	$(HOME)/.vimrc \
@@ -12,6 +15,7 @@ install-vim: clean \
 
 clean:
 	rm -rf $(HOME)/.vim
+	rm -rf $(HOME)/.config/nvim
 
 $(HOME)/.vimrc: $(current_dir)/.vimrc
 	ln -sf $< $@
