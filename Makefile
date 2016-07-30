@@ -6,7 +6,6 @@ current_dir=$(shell pwd)
 
 install-vim: clean \
 	$(current_dir)/.vim/bundle/Vundle.vim \
-	$(current_dir)/.vim/colors/molokai.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.vim
 	@vim +:PluginInstall +:qa

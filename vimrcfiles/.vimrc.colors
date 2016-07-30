@@ -1,5 +1,4 @@
 set t_Co=256
-syntax on
 
 function! s:color_molokai()
     let g:molokai_original = 1
@@ -12,5 +11,9 @@ function! s:color_badwolf()
     highlight Normal ctermbg=none
 endfunction
 
-"call s:color_molokai()
-call s:color_badwolf()
+try
+    "call s:color_molokai()
+    call s:color_badwolf()
+catch
+    echo "color scheme is not installed"
+endtry
