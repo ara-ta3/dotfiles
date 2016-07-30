@@ -45,6 +45,8 @@ call dein#add('derekwyatt/vim-sbt')
 call dein#add('szw/vim-tags')
 call dein#add('elixir-lang/vim-elixir')
 call dein#add('mattn/sonictemplate-vim')
+call dein#add('hrp/EnhancedCommentify')
+call dein#add('h1mesuke/vim-alignta')
 call dein#end()
 
 filetype plugin indent on
