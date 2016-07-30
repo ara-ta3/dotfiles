@@ -70,9 +70,49 @@ $(HOME)/.bashrc: $(current_dir)/bashrc
 	cp -f $< $@
 
 ###################################
-#####          other           ####
+#####           git           #####
 ###################################
 
-set-git-config:
-	$(MAKE) -C gitconfig set-alias
+git-config: $(HOME)/.git_template/hooks/pre-push
+	git config --global alias.br branch
+	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
+	git config --global alias.log graph
+	git config --global alias.mm "merge origin/master"
+	git config --global alias.f "fetch"
+	git config --global init.templatedir '${HOME}/.git_template'
+
+$(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
+	touch $@
+	echo "$$git_pre_push" > $@
+
+$(HOME)/.git_template/hooks:
+	mkdir -p $@
+
+define git_pre_push
+#!/bin/sh
+PROTECTED_BRANCHES=( master release )
+CURRENT_BRANCH=$$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+PUSH_COMMAND=$$(ps -ocommand= -p $$PPID)
+IS_DESTRUCTIVE='force|delete|\-f'
+WILL_REMOVE_PROTECTED_BRANCH=':'$$PROTECTED_BRANCH
+for i in "$${PROTECTED_BRANCHES[@]}"
+do
+    PROTECTED_BRANCH=$$i
+    MESSAGE="NO $$PUSH_COMMAND TO $$PROTECTED_BRANCH run 'git fetch && git merge origin $$PROTECTED_BRANCH' by pre-push hook"
+    if [[ $$PUSH_COMMAND =~ $$IS_DESTRUCTIVE ]] && [ $$CURRENT_BRANCH = $$PROTECTED_BRANCH ]; then
+        echo $$MESSAGE
+        exit 1
+    fi
+    if [[ $$PUSH_COMMAND =~ $$IS_DESTRUCTIVE ]] && [[ $$PUSH_COMMAND =~ $$PROTECTED_BRANCH ]]; then
+        echo $$MESSAGE
+        exit 1
+    fi
+    if [[ $$PUSH_COMMAND =~ $$WILL_REMOVE_PROTECTED_BRANCH ]]; then
+        echo $$MESSAGE
+        exit 1
+    fi
+done
+exit 0
+endef
+export git_pre_push
 
