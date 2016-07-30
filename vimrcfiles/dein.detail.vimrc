@@ -1,9 +1,3 @@
-" github-complete
-augroup config-github-complete
-    autocmd!
-    autocmd FileType gitcommit setl omnifunc=github_complete#complete
-augroup END
-
 " python syntax
 let python_highlight_all = 1
 
@@ -61,8 +55,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
     set conceallevel=2 concealcursor=i
 endif
-
-call pathogen#infect()
 
 let g:pdv_cfg_Copyright = ""
 let g:pdv_cfg_Author = "Arata Tanaka"
