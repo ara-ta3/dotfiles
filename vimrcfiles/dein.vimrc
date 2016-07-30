@@ -48,6 +48,7 @@ call dein#add('mattn/sonictemplate-vim')
 call dein#add('hrp/EnhancedCommentify')
 call dein#add('h1mesuke/vim-alignta')
 call dein#add('StanAngeloff/php.vim')
+call dein#add('Shougo/deoplete.nvim')
 call dein#end()
 
 filetype plugin indent on
