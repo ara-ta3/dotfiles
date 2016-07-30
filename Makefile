@@ -33,7 +33,7 @@ $(current_dir)/.vim/colors/molokai.vim:
 
 install-zsh: $(HOME)/.zshrc \
 	$(HOME)/.zplug/zsh-completions/src/_docker \
-	$(HOME)/.zplug/.zsh.d/zsh-completions/src/_hub
+	$(HOME)/.zplug/zsh-completions/src/_hub
 
 $(HOME)/.zshrc: $(current_dir)/.zshrc
 	ln -sf $< $@
