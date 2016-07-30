@@ -23,6 +23,10 @@ if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scala.vimrc'))
     source $HOME/dotfiles/vimrcfiles/syntax/scala.vimrc
 endif
 
+if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scala.vim'))
+    source $HOME/dotfiles/vimrcfiles/syntax/scala.vim
+endif
+
 if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scheme.vimrc'))
     source $HOME/dotfiles/vimrcfiles/syntax/scheme.vimrc
 endif
