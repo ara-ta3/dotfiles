@@ -5,10 +5,9 @@ current_dir=$(shell pwd)
 ###################################
 
 install-vim: clean \
-	$(current_dir)/.vim/bundle/Vundle.vim \
+	$(HOME)/.config/dein.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.vim
-	@vim +:PluginInstall +:qa
 	@vim +:VimProcInstall +:qa
 
 clean:
@@ -26,11 +25,11 @@ $(current_dir)/.vim/bundle/Vundle.vim:
 $(current_dir)/.vim/colors/molokai.vim:
 	curl -L https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > $@
 
-$(HOME)/.config/install.dein.vim.sh: $(HOME)/.config
-	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > $@
-
 $(HOME)/.config/dein.vim: $(HOME)/.config/install.dein.vim.sh
 	sh $< $@
+
+$(HOME)/.config/install.dein.vim.sh: $(HOME)/.config
+	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > $@
 
 $(HOME)/.config:
 	mkdir -p $@
