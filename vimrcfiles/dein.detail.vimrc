@@ -1,6 +1,11 @@
 " python syntax
 let python_highlight_all = 1
 
+" syntastic
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 " QuickRun
 let g:quickrun_config = {
             \   "_" : {
