@@ -11,7 +11,7 @@ install-vim: clean \
 	$(HOME)/.config/dein.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.vim
-	@vim +:VimProcInstall +:qa
+	$(MAKE) -f ./vim.mk all
 
 clean:
 	rm -rf $(HOME)/.vim
