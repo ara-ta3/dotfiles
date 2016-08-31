@@ -1,1 +1,1 @@
-autocmd FileType flow set filetype=javascript
+autocmd BufNewFile,BufReadPost *.flow set filetype=javascript
