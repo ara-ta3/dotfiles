@@ -39,5 +39,6 @@ if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/typescript.vimrc'))
     source $HOME/dotfiles/vimrcfiles/syntax/typescript.vimrc
 endif
 
+source $HOME/dotfiles/vimrcfiles/syntax/flow.vimrc
 source $HOME/dotfiles/vimrcfiles/syntax/markdown.vimrc
 syntax on
