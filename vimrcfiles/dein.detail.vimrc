@@ -13,7 +13,7 @@ let python_highlight_all = 1
 
 let g:syntastic_mode_map = { 'mode': 'passive',
     \ 'active_filetypes': ['go'] }
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck', 'govet']
+let g:syntastic_go_checkers = ['golint', 'errcheck', 'govet']
 
 " QuickRun
 let g:quickrun_config = {
