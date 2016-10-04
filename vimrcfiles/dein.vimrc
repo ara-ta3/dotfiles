@@ -52,6 +52,7 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('rcmdnk/vim-markdown')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('flowtype/vim-flow')
+call dein#add('qpkorr/vim-renamer')
 call dein#end()
 
 filetype plugin indent on
