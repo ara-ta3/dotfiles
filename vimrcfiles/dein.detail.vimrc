@@ -8,20 +8,7 @@ let python_highlight_all = 1
 
 " syntastic
 
-"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-let g:syntastic_mode_map = { 'mode': 'passive',
-    \ 'active_filetypes': ['go'] }
-let g:syntastic_go_checkers = ['golint', 'errcheck', 'govet']
-
-" QuickRun
-let g:quickrun_config = {
-            \   "_" : {
-            \       "outputter/buffer/split" : ":botright",
-            \       "outputter/buffer/close_on_empty" : 1
-            \   },
-            \}
+source $HOME/dotfiles/vimrcfiles/quickrun.vimrc
 
 " Alingtaの初期設定
 let b:alignta_default_arguments='01'
@@ -30,7 +17,7 @@ let g:alignta_default_arguments='01'
 " php-doc
 
 let g:pdv_cfg_Copyright = ""
-let g:pdv_cfg_Author = "a-tanaka"
+let g:pdv_cfg_Author = ""
 let g:pdv_cfg_License = ""
 inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-D> :call PhpDocSingle()<CR>
