@@ -55,6 +55,7 @@ call dein#add('flowtype/vim-flow')
 call dein#add('rust-lang/rust.vim')
 call dein#add('qpkorr/vim-renamer')
 call dein#add('thinca/vim-quickrun')
+call dein#add('hynek/vim-python-pep8-indent')
 call dein#end()
 
 filetype plugin indent on
