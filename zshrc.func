@@ -17,3 +17,7 @@ function run-remote-docker () {
 function pull-remote-docker () {
     docker pull `docker search tarata|grep -v NAME|peco |awk '{print $1}'`
 }
+
+function unix2date () {
+     gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
+}
