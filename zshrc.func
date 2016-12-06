@@ -29,3 +29,7 @@ function ssh-peco () {
 function git-delete-non-used-branch() {
     git br |grep -v master|xargs -n 1 git br -d
 }
+
+function unix2date () {
+     gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
+}
