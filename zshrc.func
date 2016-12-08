@@ -18,6 +18,18 @@ function pull-remote-docker () {
     docker pull `docker search tarata|grep -v NAME|peco |awk '{print $1}'`
 }
 
+function ssh-peco () {
+    host=$(grep -iE '^host\s+(\w|\d)+' ~/.ssh/config | awk '{print $2}' | peco)
+
+    if [ -n "$host" ]; then
+        ssh a-tanaka@$host
+    fi
+}
+
+function git-delete-non-used-branch() {
+    git br |grep -v master|xargs -n 1 git br -d
+}
+
 function unix2date () {
      gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
 }

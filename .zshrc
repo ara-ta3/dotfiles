@@ -31,6 +31,7 @@ export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
 export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=CxGxcxdxCxegedabagacad
+export EDITOR=vim
 
 alias ls="ls -G"
 alias l="ls"
