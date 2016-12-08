@@ -1,6 +1,6 @@
 bindkey "\e[Z" reverse-menu-complete
-bindkey "^b" backward-word
-bindkey "^n" forward-word
+# bindkey "^b" backward-word
+# bindkey "^n" forward-word
 
 
 # for peco
