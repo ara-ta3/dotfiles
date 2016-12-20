@@ -41,4 +41,5 @@ endif
 
 source $HOME/dotfiles/vimrcfiles/syntax/flow.vimrc
 source $HOME/dotfiles/vimrcfiles/syntax/markdown.vimrc
+source $HOME/dotfiles/vimrcfiles/syntax/terraform.vimrc
 syntax on
