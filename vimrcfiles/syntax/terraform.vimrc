@@ -1,1 +1,1 @@
-autocmd FileType tfvars set filetype=terraform
+autocmd BufNewFile,BufReadPost *.tfvars set filetype=terraform
