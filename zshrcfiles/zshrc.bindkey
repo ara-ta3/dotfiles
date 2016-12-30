@@ -1,9 +1,3 @@
-bindkey "\e[Z" reverse-menu-complete
-bindkey "^b" backward-word
-bindkey "^n" forward-word
-
-
-# for peco
 function peco-select-history() {
   local tac
   if which tac > /dev/null; then
@@ -31,7 +25,7 @@ function peco-path() {
   CURSOR=$#BUFFER
 }
 
-function peco-src () {
+function ghq-peco () {
     local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
@@ -40,10 +34,25 @@ function peco-src () {
     zle clear-screen
 }
 
-zle -N peco-src
+function ghq-my-dir () {
+    cd $(ghq root)/github.com/ara-ta3
+    zle accept-line
+}
+
+function hub-browse () {
+    hub browse $(ghq list|peco|cut -d "/" -f 2,3)
+}
+
 zle -N peco-path
 zle -N peco-select-history
+zle -N ghq-peco
+zle -N ghq-my-dir
+zle -N hub-browse
 bindkey '^r' peco-select-history
 bindkey '^f' peco-path 
-bindkey '^g' peco-src
-
+bindkey '^G^G' ghq-peco
+bindkey '^G^R' ghq-my-dir
+bindkey '^H^H' hub-browse
+bindkey "\e[Z" reverse-menu-complete
+bindkey "^b" backward-word
+bindkey "^n" forward-word
