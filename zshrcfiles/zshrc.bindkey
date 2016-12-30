@@ -54,5 +54,3 @@ bindkey '^G^G' ghq-peco
 bindkey '^G^R' ghq-my-dir
 bindkey '^H^H' hub-browse
 bindkey "\e[Z" reverse-menu-complete
-bindkey "^b" backward-word
-bindkey "^n" forward-word
