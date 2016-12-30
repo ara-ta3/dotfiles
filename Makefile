@@ -42,23 +42,27 @@ $(HOME)/.config:
 #####           zsh           #####
 ###################################
 
-install-zsh: $(HOME)/.zshrc \
-	$(HOME)/.zplug/zsh-completions/src/_docker \
-	$(HOME)/.zplug/zsh-completions/src/_hub
+zdirs=$(HOME)/.zfunc \
+	  $(HOME)/.zsh.d
 
-$(HOME)/.zshrc: $(current_dir)/.zshrc
+clean-zsh:
+	rm -rf $(zdirs)
+	rm -f $(HOME)/.zcompdump
+
+install-zsh: $(HOME)/.zshrc \
+	$(HOME)/.zfunc/_docker \
+	$(HOME)/.zfunc/_hub
+
+$(HOME)/.zshrc: .zshrc
 	ln -sf $< $@
 
-$(HOME)/.zplug/zsh-completions/src/_docker: $(HOME)/.zplug/zsh-completions/src
+$(HOME)/.zfunc/_docker: $(HOME)/.zfunc
 	curl -L https://raw.github.com/felixr/docker-zsh-completion/master/_docker > $@
 
-$(HOME)/.zplug/zsh-completions/src/_hub: $(HOME)/.zplug/zsh-completions/src
-	curl -L https://github.com/github/hub/blob/master/etc/hub.zsh_completion > $@
+$(HOME)/.zfunc/_hub: $(HOME)/.zfunc
+	curl -L https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion > $@
 
-$(HOME)/.zplug/zsh-completions/src:
-	mkdir -p $@
-
-$(HOME)/.zsh.d:
+$(zdirs):
 	mkdir -p $@
 
 ###################################

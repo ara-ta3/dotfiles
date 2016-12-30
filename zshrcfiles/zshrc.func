@@ -1,13 +1,11 @@
-function avim () {
-    vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
-}
-
-function g-checkout-peco () {
-    git checkout $(git branch -a|grep -v "*"|grep -v "origin/master"|sed -e 's/remotes\///g'|peco|sed -e 's/origin\///g')
-}
-
 function run-docker () {
     docker run -i -t `docker images |grep -v REPOSITORY|peco |awk '{print $1 ":" $2}'` /bin/bash
+}
+
+function exec-docker () {
+    if [ -n "$1" ]; then
+        docker exec -it $1 bash
+    fi
 }
 
 function run-remote-docker () {
