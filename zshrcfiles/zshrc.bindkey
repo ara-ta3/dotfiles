@@ -34,23 +34,29 @@ function ghq-peco () {
     zle clear-screen
 }
 
-function ghq-my-dir () {
+function ghqdir () {
     cd $(ghq root)/github.com/ara-ta3
-    zle accept-line
+}
+
+function godir () {
+    cd $GOPATH/src/github.com/ara-ta3
 }
 
 function hub-browse () {
     hub browse $(ghq list|peco|cut -d "/" -f 2,3)
 }
 
+function git-get () {
+    ghq get $1
+}
+
 zle -N peco-path
 zle -N peco-select-history
 zle -N ghq-peco
-zle -N ghq-my-dir
+zle -N ghqdir
 zle -N hub-browse
 bindkey '^r' peco-select-history
 bindkey '^f' peco-path 
-bindkey '^G^G' ghq-peco
-bindkey '^G^R' ghq-my-dir
+bindkey '^G' ghq-peco
 bindkey '^H^H' hub-browse
 bindkey "\e[Z" reverse-menu-complete

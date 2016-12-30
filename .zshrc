@@ -49,7 +49,6 @@ alias gcm='git commit'
 alias gcmm='git commit -m'
 alias gs='git status'
 alias gd='git diff'
-alias git-get="ghq get"
 alias -g p='|peco'
 alias -g gr='|xargs grep --color'
 
