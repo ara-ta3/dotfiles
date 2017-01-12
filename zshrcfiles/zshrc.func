@@ -29,5 +29,9 @@ function git-delete-non-used-branch() {
 }
 
 function unix2date () {
-     gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
+    gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
+}
+
+function docker-clean () {
+    docker ps -aq -f status=exited -f status=dead | xargs docker rm
 }
