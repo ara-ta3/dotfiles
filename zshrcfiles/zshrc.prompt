@@ -17,12 +17,12 @@ precmd () {
 function get_uptime() {
     local u res
     u=$(uptime)
-    echo $u | grep min
+    echo $u | grep min > /dev/null 2> /dev/null
     if [ $? -eq 0 ]; then
         echo $u|awk '{print $3 " " $4}'|tr -d ,
         return
     fi
-    echo $u | grep days
+    echo $u | grep days > /dev/null 2> /dev/null
     if [ $? -eq 0 ]; then
         echo $u|awk '{print $3 " " $4}'|tr -d ,
         return
