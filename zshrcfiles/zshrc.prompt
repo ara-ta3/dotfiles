@@ -46,9 +46,7 @@ $dir
 
 RPROMPT=$gitprompt
 
-SPROMPT="$user
-$dir
-%F{blue}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
+SPROMPT="%F{blue}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
 # mysql prompt
 m_color0=$'\e[1;36m'
