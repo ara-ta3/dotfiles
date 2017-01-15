@@ -4,7 +4,7 @@ autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats '(git)-[%b]@(%r)' '%c' '%u'
+zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
 zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
 
 precmd () {
@@ -37,18 +37,18 @@ function get_uptime() {
 }
 
 gitprompt="%1(v|%{${bg[magenta]}%}%1v%{${reset_color}%}|)%"
-user="%F{cyan}┌%f ${bg[blue]}[%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]${reset_color}"
-dir="%F{cyan}│%f %{${fg[green]}%}%~%{${reset_color}%}"
+user="%F{blue}┌%f ${bg[blue]}[%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]${reset_color}"
+dir="%F{blue}│%f %{${fg[green]}%}%~%{${reset_color}%}"
 
 PROMPT="$user
 $dir
-%F{cyan}└%f %(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+%F{blue}└%f %(?.%{$fg[cyan]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$gitprompt
 
 SPROMPT="$user
 $dir
-%F{cyan}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[blue]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
+%F{blue}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
 # mysql prompt
 m_color0=$'\e[1;36m'
