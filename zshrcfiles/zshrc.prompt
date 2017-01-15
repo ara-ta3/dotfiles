@@ -4,25 +4,45 @@ autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
+zstyle ':vcs_info:git:*' formats '(git)-[%b]@(%r)' '%c' '%u'
 zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
 
 precmd () {
     psvar=()
     LANG=ja_JP.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+    psvar[2]=$(get_uptime);
 }
-GITPROMPT="%1(v|%F{magenta}%1v%f|)%
-"
-# prompt setting
 
-PROMPT="[%F{yellow}%n%f@%F{yellow}%m %D %T%f] %{${fg[green]}%}%~%{${reset_color}%}
-%(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+function get_uptime() {
+    local u res
+    u=$(uptime)
+    echo $u | grep min
+    if [ $? -eq 0 ]; then
+        echo $u|awk '{print $3 " " $4}'|tr -d ,
+        return
+    fi
+    echo $u | grep days
+    if [ $? -eq 0 ]; then
+        echo $u|awk '{print $3 " " $4}'|tr -d ,
+        return
+    fi
+    echo $u|awk '{print $3}'|tr -d ,
+}
 
-RPROMPT=$GITPROMPT
+gitprompt="%1(v|%F{magenta}%1v%f|)%"
+user="%F{cyan}┌%f [%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]"
+dir="%F{cyan}│%f %{${fg[green]}%}%~%{${reset_color}%}"
 
-# spell correction prompt
-SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(y), 違う!(n),a,e]: ${reset_color}"
+PROMPT="$user
+$dir
+%F{cyan}└%f %(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+
+RPROMPT=$gitprompt
+
+SPROMPT="$user
+$dir
+%F{cyan}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[blue]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
 # mysql prompt
 m_color0=$'\e[1;36m'
