@@ -54,15 +54,15 @@ function left-prompt {
 }
 
 gitprompt="%1(v|%{${fg[magenta]}%}%1v%{${reset_color}%}|)%"
-top="%F{blue}┌%f %{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
+top="%{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
 # top="`left-prompt`"
 
 PROMPT="$top
-%F{blue}└%f %(?.%{$fg[cyan]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+%(?.%{$fg[cyan]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$gitprompt
 
-SPROMPT="%F{blue}└%f %{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
+SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
 # mysql prompt
 m_color0=$'\e[1;36m'
