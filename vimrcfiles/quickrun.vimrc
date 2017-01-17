@@ -1,8 +1,10 @@
-let g:syntastic_mode_map = { 'mode': 'passive',
-    \ 'active_filetypes': ['go', 'python'] }
+let g:syntastic_mode_map = {
+            \ 'mode': 'passive',
+            \ 'active_filetypes': ['go', 'python', 'ruby']
+            \ }
 let g:syntastic_go_checkers = ['golint', 'errcheck', 'govet']
-
 let g:syntastic_python_checkers = ['flake8', 'mypy']
+let g:syntastic_ruby_checkers = ['rubocop']
 
 "" quickrun
 let g:quickrun_config = get(g:, 'quickrun_config', {})
