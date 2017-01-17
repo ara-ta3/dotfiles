@@ -36,8 +36,8 @@ function get_uptime() {
     echo $u|awk '{print $3}'|tr -d ,
 }
 
-gitprompt="%1(v|%{${bg[magenta]}%}%1v%{${reset_color}%}|)%"
-user="%F{blue}┌%f ${bg[blue]}[%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]${reset_color}"
+gitprompt="%1(v|%{${fg[magenta]}%}%1v%{${reset_color}%}|)%"
+user="%F{blue}┌%f [%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]"
 dir="%F{blue}│%f %{${fg[green]}%}%~%{${reset_color}%}"
 
 PROMPT="$user
