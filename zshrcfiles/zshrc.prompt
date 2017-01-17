@@ -36,12 +36,28 @@ function get_uptime() {
     echo $u|awk '{print $3}'|tr -d ,
 }
 
-gitprompt="%1(v|%{${fg[magenta]}%}%1v%{${reset_color}%}|)%"
-user="%F{blue}┌%f [%F{yellow}%n%f@%F{yellow}%m%f / %F{yellow}Now %T%f / %F{yellow}Uptime %2v%f]"
-dir="%F{blue}│%f %{${fg[green]}%}%~%{${reset_color}%}"
 
-PROMPT="$user
-$dir
+function left-prompt {
+    FIRST='178m%}'
+    FIRST_B='237m%}'
+    SECOND='007m%}'
+    SECOND_B='067m%}'
+
+    sharp='\uE0B0'
+    FG='%{[38;5;'
+    BG='%{[30;48;5;'
+    RESET='%{[0m%}'
+    USER_AND_HOST="${BG}${FIRST_B}${FG}${FIRST}"
+    DIR="${BG}${SECOND_B}${FG}${SECOND}"
+
+    echo "${USER_AND_HOST}%n@%m${BG}${SECOND_B}${FG}${FIRST_B}${sharp} ${DIR}%~${RESET}${FG}${SECOND_B}${sharp} ${RESET}"
+}
+
+gitprompt="%1(v|%{${fg[magenta]}%}%1v%{${reset_color}%}|)%"
+top="%F{blue}┌%f %{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
+# top="`left-prompt`"
+
+PROMPT="$top
 %F{blue}└%f %(?.%{$fg[cyan]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$gitprompt
