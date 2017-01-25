@@ -12,7 +12,7 @@ function! s:color_badwolf()
 endfunction
 
 try
-    call s:color_molokai()
+    call s:color_badwolf()
 catch
     echo "color scheme is not installed"
 endtry
