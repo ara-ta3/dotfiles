@@ -1,0 +1,15 @@
+nnoremap < gT
+nnoremap > gt
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
+nnoremap q :<C-u>q<CR>
+imap jj <Esc>
+
+" ============================================================================
+" IDE actions
+" ============================================================================
+nnoremap / :action Find<CR>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
