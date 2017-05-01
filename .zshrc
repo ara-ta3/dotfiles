@@ -20,7 +20,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias gch='git checkout'
 alias ga='git add'
-alias gcm='git commit'
+alias gcm='git commit -v'
 alias gs='git status'
 alias gd='git diff'
 
