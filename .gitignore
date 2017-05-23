@@ -1,6 +1,6 @@
 *.local
 .vim/.netrwhist
-.vim/colors/molokai.git/
+.vim/colors
 !/.vim/bundle/Vundle.vim
 /.vim/bundle
 /.atom/compile-cache
