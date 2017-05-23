@@ -23,6 +23,8 @@ alias ga='git add'
 alias gcm='git commit'
 alias gs='git status'
 alias gd='git diff'
+alias g='git'
+alias h='hub'
 
 source ~/dotfiles/zshrcfiles/zshrc.zplug
 source ~/dotfiles/zshrcfiles/zshrc.completion
@@ -39,3 +41,6 @@ export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=CxGxcxdxCxegedabagacad
 export EDITOR=vim
+
+# added by travis gem
+[ -f /Users/t-arata/.travis/travis.sh ] && source /Users/t-arata/.travis/travis.sh
