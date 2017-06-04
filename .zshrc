@@ -11,21 +11,7 @@ setopt print_eight_bit
 setopt pushd_ignore_dups
 setopt extended_history
 
-alias ls="ls -G"
-alias l="ls"
-alias ll="ls -hl"
-alias la="ls -A"
-alias rm="rm -i"
-alias cp="cp -i"
-alias mv="mv -i"
-alias gch='git checkout'
-alias ga='git add'
-alias gcm='git commit -v'
-alias gs='git status'
-alias gd='git diff'
-alias g='git'
-alias h='hub'
-
+source ~/dotfiles/zshrcfiles/zshrc.alias
 source ~/dotfiles/zshrcfiles/zshrc.zplug
 source ~/dotfiles/zshrcfiles/zshrc.completion
 source ~/dotfiles/zshrcfiles/zshrc.bindkey
@@ -43,4 +29,4 @@ export LSCOLORS=CxGxcxdxCxegedabagacad
 export EDITOR=vim
 
 # added by travis gem
-[ -f /Users/t-arata/.travis/travis.sh ] && source /Users/t-arata/.travis/travis.sh
+[ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
