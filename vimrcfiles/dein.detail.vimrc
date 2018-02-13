@@ -9,6 +9,7 @@ let python_highlight_all = 1
 " syntastic
 
 source $HOME/dotfiles/vimrcfiles/quickrun.vimrc
+source $HOME/dotfiles/vimrcfiles/editorconfig.vimrc
 
 " Alingtaの初期設定
 let b:alignta_default_arguments='01'
