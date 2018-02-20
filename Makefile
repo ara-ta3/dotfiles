@@ -86,13 +86,14 @@ $(HOME)/.bashrc: $(current_dir)/bashrc
 #####           git           #####
 ###################################
 
-git-config: $(HOME)/.git_template/hooks/pre-push
+git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template
 	git config --global alias.br branch
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
 	git config --global alias.mm "merge origin/master"
 	git config --global alias.f "fetch -p"
 	git config --global init.templatedir '${HOME}/.git_template'
+	git config --global commit.template '${HOME}/.git_commit_template'
 	which hub && hub config --global alias.pr "pull-request"
 
 $(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
@@ -101,6 +102,10 @@ $(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
 
 $(HOME)/.git_template/hooks:
 	mkdir -p $@
+
+$(HOME)/.git_commit_template:
+	touch $@
+	echo "$$git_commit_template" > $@
 
 define git_pre_push
 #!/bin/sh
@@ -130,3 +135,20 @@ exit 0
 endef
 export git_pre_push
 
+define git_commit_template
+
+
+# 🐛  :bug: バグ修正
+# 👍  :+1: 機能改善
+# ✨  :sparkles: 部分的な機能追加
+# 🎉  :tada: 盛大に祝うべき大きな機能追加
+# ♻️   :recycle: リファクタリング
+# 🚿  :shower: 不要な機能・使われなくなった機能の削除
+# 💚  :green_heart: テストやCIの修正・改善
+# 👕  :shirt: Lintエラーの修正やコードスタイルの修正
+# 🚀  :rocket: パフォーマンス改善
+# 🆙  :up: 依存パッケージなどのアップデート
+# 🔒  :lock: 新機能の公開範囲の制限
+# 👮  :cop: セキュリティ関連の改善
+endef
+export git_commit_template
