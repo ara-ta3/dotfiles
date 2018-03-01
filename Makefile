@@ -92,6 +92,7 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template
 	git config --global alias.log graph
 	git config --global alias.mm "merge origin/master"
 	git config --global alias.f "fetch -p"
+	git config --global alias.m "merge"
 	git config --global init.templatedir '${HOME}/.git_template'
 	git config --global commit.template '${HOME}/.git_commit_template'
 	which hub && hub config --global alias.pr "pull-request"
