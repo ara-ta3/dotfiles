@@ -95,11 +95,15 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template
 	git config --global alias.m "merge"
 	git config --global init.templatedir '${HOME}/.git_template'
 	git config --global commit.template '${HOME}/.git_commit_template'
-	which hub && hub config --global alias.pr "pull-request"
+	git config --global core.pager "less -cm"
+	git config --global core.quotepath "false"
+	which hub && hub config --global alias.pull "pull-request"
+	which hub && hub config --global alias.pl "pull-request"
 
 $(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
 	touch $@
 	echo "$$git_pre_push" > $@
+	chmod +x $@
 
 $(HOME)/.git_template/hooks:
 	mkdir -p $@
