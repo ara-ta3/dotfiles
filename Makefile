@@ -86,7 +86,7 @@ $(HOME)/.bashrc: $(current_dir)/bashrc
 #####           git           #####
 ###################################
 
-git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template
+git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(HOME)/.gitignore_global
 	git config --global alias.br branch
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
@@ -97,6 +97,7 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template
 	git config --global commit.template '${HOME}/.git_commit_template'
 	git config --global core.pager "less -cm"
 	git config --global core.quotepath "false"
+	git config --global core.excludesfile ${HOME}/.gitignore_global
 	which hub && hub config --global alias.pull "pull-request"
 	which hub && hub config --global alias.pl "pull-request"
 
@@ -111,6 +112,10 @@ $(HOME)/.git_template/hooks:
 $(HOME)/.git_commit_template:
 	touch $@
 	echo "$$git_commit_template" > $@
+
+$(HOME)/.gitignore_global:
+	touch $@
+	echo "$$git_ignore_global" > $@
 
 define git_pre_push
 #!/bin/sh
@@ -157,3 +162,9 @@ define git_commit_template
 # 👮  :cop: セキュリティ関連の改善
 endef
 export git_commit_template
+
+define git_ignore_global
+__pycache__
+.DS_Store
+endef
+export git_ignore_global

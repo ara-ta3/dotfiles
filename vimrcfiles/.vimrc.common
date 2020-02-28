@@ -31,7 +31,6 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 nnoremap <C-a> :NERDTreeFind<CR>
-nnoremap q :<C-u>q<CR>
 nnoremap W :<C-u>w<CR>
 nnoremap <C-u> :Unite<CR>
 
