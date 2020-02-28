@@ -30,9 +30,9 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
-nnoremap <C-a> :NERDTreeFind<CR>
 nnoremap W :<C-u>w<CR>
 nnoremap <C-u> :Unite<CR>
+nnoremap qq :q<CR>
 
 " コマンドラインモード
 
