@@ -31,7 +31,6 @@ function ghq-peco () {
         BUFFER="cd ${selected_dir}"
         zle accept-line
     fi
-    zle clear-screen
 }
 
 function ghqdir () {
