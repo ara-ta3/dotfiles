@@ -106,8 +106,8 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global core.quotepath "false"
 	git config --global core.excludesfile ${HOME}/.gitignore_global
 	git config --global pager.branch false
-	which hub && hub config --global alias.pull "pull-request"
-	which hub && hub config --global alias.pl "pull-request"
+	(which hub && hub config --global alias.pull "pull-request") || echo "no hub"
+	(which hub && hub config --global alias.pl "pull-request") || echo "no hub"
 
 $(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
 	touch $@
