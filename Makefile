@@ -87,7 +87,7 @@ $(HOME)/.bashrc: $(current_dir)/bashrc
 ###################################
 
 git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(HOME)/.gitignore_global
-	git config --global alias.br branch
+	git config --global alias.br "branch -vv"
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
 	git config --global alias.mm "merge origin/master"
@@ -99,6 +99,7 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global core.pager "less -cm"
 	git config --global core.quotepath "false"
 	git config --global core.excludesfile ${HOME}/.gitignore_global
+	git config --global pager.branch false
 	which hub && hub config --global alias.pull "pull-request"
 	which hub && hub config --global alias.pl "pull-request"
 
