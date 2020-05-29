@@ -15,6 +15,8 @@ install-vim: clean \
 	$(HOME)/.vim
 	$(MAKE) -f ./vim.mk all
 
+install-config: $(HOME)/.config/peco git-config
+
 clean:
 	rm -rf $(HOME)/.vim
 	rm -rf $(HOME)/.config/nvim
@@ -33,6 +35,10 @@ $(current_dir)/.vim/bundle/Vundle.vim:
 
 $(current_dir)/.vim/colors/molokai.vim:
 	curl -L https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > $@
+
+$(HOME)/.config/peco: $(HOME)/.config
+	rm -rf $@
+	cp -rf ./config/peco $@
 
 $(HOME)/.config/dein.vim: $(HOME)/.config/install.dein.vim.sh
 	sh $< $@
