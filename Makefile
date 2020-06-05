@@ -100,6 +100,7 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global alias.f "fetch -p"
 	git config --global alias.m "merge"
 	git config --global alias.pushf "push --force-with-lease"
+	git config --global alias.pu "zsh -c 'git push origin $(git symbolic-ref --short)'"
 	git config --global init.templatedir '${HOME}/.git_template'
 	git config --global commit.template '${HOME}/.git_commit_template'
 	git config --global core.pager "less -cm"
