@@ -25,7 +25,7 @@ function ssh-peco () {
 }
 
 function git-delete-non-used-branch() {
-    git branch --merged |grep -v master|tr -d '* '|xargs -n 1 git branch -d
+git branch --merged |grep -v master|grep -v $(git symbolic-ref --short HEAD)|tr -d '* '|xargs -n 1 git branch -d
 }
 
 function unix2date () {
