@@ -80,10 +80,7 @@ $(zdirs):
 #####           bash           ####
 ###################################
 
-install-bash: $(HOME)/.bashrc $(HOME)/git-prompt.sh
-
-$(HOME)/git-prompt.sh:
-	curl --output $@ --url https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+install-bash: $(HOME)/.bashrc
 
 $(HOME)/.bashrc: $(current_dir)/bashrc
 	cp -f $< $@
