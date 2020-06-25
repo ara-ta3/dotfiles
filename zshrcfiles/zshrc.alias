@@ -16,3 +16,7 @@ alias d='docker'
 which exa > /dev/null && alias ls='exa -F'
 which exa > /dev/null && alias ll='exa -Fl --time-style long-iso --header'
 which exa > /dev/null && alias la='exa -Fa'
+
+which bat > /dev/null && alias cat='bat --style=plain --paging=never'
+which bat > /dev/null && alias less='bat --style=plain'
+
