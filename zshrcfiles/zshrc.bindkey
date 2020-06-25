@@ -56,7 +56,7 @@ function do_enter() {
     fi
     echo
     echo -e "\e[0;33m--- ls ---\e[0m"
-    which exa > /dev/null && exa -l || ls -l
+    which exa > /dev/null && exa -Fla --git-ignore --time-style long-iso --header|| ls -l
     if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
         echo 
         echo -e "\e[0;33m--- git status ---\e[0m"
