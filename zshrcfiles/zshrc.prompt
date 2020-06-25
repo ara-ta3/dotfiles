@@ -50,19 +50,19 @@ function left-prompt {
     USER_AND_HOST="${BG}${FIRST_B}${FG}${FIRST}"
     DIR="${BG}${SECOND_B}${FG}${SECOND}"
 
-    echo "${USER_AND_HOST}%n@%m${BG}${SECOND_B}${FG}${FIRST_B}${sharp} ${DIR}%~${RESET}${FG}${SECOND_B}${sharp} ${RESET}"
+    echo "${USER_AND_HOST}%n@%m(Up %2v) ${DIR}%~${RESET}"
 }
 
 gitprompt="%1(v|%{${fg[magenta]}%}%1v%{${reset_color}%}|)%"
-top="%{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
-# top="`left-prompt`"
+# above="%{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
+above="`left-prompt`"
 
-PROMPT="$top
-%(?.%{$fg[cyan]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
+PROMPT="$above
+%(?.%{$fg[blue]%}.%{$fg[red]%})%(?!( ｡◕‿◕｡) <!( *;-;%)? <)%{${reset_color}%} "
 
 RPROMPT=$gitprompt
 
-SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[cyan]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
+SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[blue]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
 # mysql prompt
 m_color0=$'\e[1;36m'
