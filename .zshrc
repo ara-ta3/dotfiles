@@ -10,6 +10,7 @@ setopt auto_menu
 setopt print_eight_bit
 setopt pushd_ignore_dups
 setopt extended_history
+setopt print_exit_value
 
 source ~/dotfiles/zshrcfiles/zshrc.alias
 source ~/dotfiles/zshrcfiles/zshrc.zplug
