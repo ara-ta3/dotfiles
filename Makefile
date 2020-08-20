@@ -97,6 +97,9 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global alias.f "fetch -p"
 	git config --global alias.m "merge"
 	git config --global alias.pushf "push --force-with-lease"
+	git config --global alias.ch "checkout --progress"
+	git config --global alias.s "switch"
+	git config --global alias.r "restore --progress"
 	git config --global init.templatedir '${HOME}/.git_template'
 	git config --global commit.template '${HOME}/.git_commit_template'
 	git config --global core.pager "less -cm"
