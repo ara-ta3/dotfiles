@@ -15,6 +15,12 @@ install-vim: clean \
 	$(HOME)/.vim
 	$(MAKE) -f ./vim.mk all
 
+install-brew:
+	brew bundle
+
+clean-brew:
+	brew bundle cleanup
+
 install-config: $(HOME)/.config/peco git-config
 
 clean:
