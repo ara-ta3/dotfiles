@@ -5,16 +5,15 @@
         },
         "spellcheck-tech-word": true,
         "preset-ja-technical-writing": {
-            "no-mix-dearu-desumasu": true,
             "preset-ja-spacing": false,
             "sentence-length": {
-                max: 150
+                "max": 150
             },
             "max-comma": {
-                max: 3
+                "max": 3
             },
             "max-kanji-continuous-len": {
-                max: 6
+                "max": 6
             },
             "no-mix-dearu-desumasu": {
                 "preferInHeader": "",
@@ -34,7 +33,8 @@
             "ja-no-abusage": true,
             "ja-no-redundant-expression": true,
             "ja-unnatural-alphabet": true,
-            "no-exclamation-question-mark": false
+            "no-exclamation-question-mark": false,
+            "ja-no-mixed-period": false
         }
     }
 }
