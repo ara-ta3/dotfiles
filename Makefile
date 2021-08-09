@@ -99,7 +99,7 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global alias.br "branch -vv"
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
-	git config --global alias.mm "merge origin/master"
+	git config --global alias.mm "!sh -c '(git br|grep master > /dev/null) && git merge origin/master || git merge origin/main'"
 	git config --global alias.f "fetch -p"
 	git config --global alias.m "merge"
 	git config --global alias.pushf "push --force-with-lease"
