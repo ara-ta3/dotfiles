@@ -39,3 +39,7 @@ function docker-clean () {
 function docker-clean-image () {
     docker volume rm $(docker volume ls |awk '{print $2}')
 }
+
+function gssm () {
+    (git br |grep master > /dev/null) && git switch master || git switch main
+}
