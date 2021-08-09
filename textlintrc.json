@@ -1,8 +1,5 @@
 {
     "rules": {
-        "max-ten": {
-            "max": 3
-        },
         "spellcheck-tech-word": true,
         "preset-ja-technical-writing": {
             "preset-ja-spacing": false,
@@ -34,7 +31,11 @@
             "ja-no-redundant-expression": true,
             "ja-unnatural-alphabet": true,
             "no-exclamation-question-mark": false,
-            "ja-no-mixed-period": false
+            "ja-no-mixed-period": false,
+            "ja-no-weak-phrase": false,
+            "max-ten": {
+                "max": 5
+            }
         }
     }
 }
