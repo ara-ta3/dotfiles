@@ -43,3 +43,20 @@ function docker-clean-image () {
 function gssm () {
     (git br |grep master > /dev/null) && git switch master || git switch main
 }
+
+function slack-notify () {
+    if [ -n "$SLACK_WEBHOOK_URL" ]; then
+        if [ -n "$1" ]; then
+            curl -X POST \
+                -H 'Content-type: application/json' \
+                --data "{\"text\":\"$1\"}" \
+                $SLACK_WEBHOOK_URL
+        else
+            echo '$1 is empty'
+            exit 1
+        fi
+    else
+        echo SLACK_WEBHOOK_URL env is empty
+        exit 1
+    fi
+}
