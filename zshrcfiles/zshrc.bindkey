@@ -70,7 +70,7 @@ function do_enter() {
 }
 
 function documents-peco () {
-    local ds="$(echo $HOME/Documents)\n$(echo $HOME/Documents/Workspace)\n$(find $HOME/Documents -type d -depth 2)\n$(find $HOME/Documents -type d -depth 3)\n$(find $HOME/Documents -type d -depth 4)"
+    local ds="$(echo $HOME/Documents/Workspace)\n$(find $HOME/Documents/Workspace -type d -depth 2)"
     local selected_dir=$(echo $ds|sort|peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
@@ -79,13 +79,14 @@ function documents-peco () {
 }
 
 zle -N documents-peco
+bindkey '^b' documents-peco
+
 zle -N do_enter
 zle -N peco-path
 zle -N peco-select-history
 zle -N ghq-peco
 zle -N ghqdir
 zle -N hub-browse
-bindkey '^b' documents-peco
 bindkey '^r' peco-select-history
 bindkey '^f' peco-path 
 bindkey '^G' ghq-peco
