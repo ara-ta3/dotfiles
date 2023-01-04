@@ -60,7 +60,7 @@ call dein#add('vim-scripts/vim-terraform')
 call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
 call dein#add('cespare/vim-toml')
-call dein#add('editorconfig/editorconfig-vim')
+"call dein#add('editorconfig/editorconfig-vim')
 call dein#end()
 
 filetype plugin indent on
