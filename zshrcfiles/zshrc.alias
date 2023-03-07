@@ -17,6 +17,7 @@ alias d='docker'
 which lsd > /dev/null && alias ls='lsd -F'
 which lsd > /dev/null && alias ll='lsd -Fl --header'
 which lsd > /dev/null && alias la='lsd -Fa'
+which lsd > /dev/null && alias lt='lsd --tree --depth 2'
 
 which bat > /dev/null && alias cat='bat --style=plain --paging=never'
 which bat > /dev/null && alias less='bat --style=plain'
