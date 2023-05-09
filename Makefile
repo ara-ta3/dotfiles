@@ -50,7 +50,7 @@ $(HOME)/.config/dein.vim: $(HOME)/.config/install.dein.vim.sh
 	sh $< $@
 
 $(HOME)/.config/install.dein.vim.sh: $(HOME)/.config
-	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > $@
+	curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh > $@
 
 $(HOME)/.config:
 	mkdir -p $@
