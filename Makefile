@@ -21,6 +21,12 @@ install-brew:
 clean-brew:
 	brew bundle cleanup
 
+# @see https://github.com/volta-cli/volta
+install-node-manager: 
+	curl https://get.volta.sh | bash
+	echo "export $$VOLTA_HOME=$$HOME/.volta"
+	echo "export $$PATH=$$VOLTA_HOME/bin:$$PATH"
+
 install-config: $(HOME)/.config/peco git-config
 
 clean:
