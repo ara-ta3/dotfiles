@@ -65,6 +65,8 @@ call dein#add('vim-denops/denops.vim')
 call dein#add('Shougo/ddc-around')
 call dein#add('Shougo/ddc-matcher_head')
 call dein#add('Shougo/ddc-sorter_rank')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
 call dein#end()
 
 filetype plugin indent on
