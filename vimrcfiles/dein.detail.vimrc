@@ -28,7 +28,6 @@ vnoremap <C-D> :call PhpDocRange()<CR>
 let g:ref_phpmanual_path = $HOME."dotfiles/.vim/doc/php/php-chunked-xhtml"
 let g:ref_use_vimproc = 0 
 
-"let g:neocomplcache_keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
 vmap <CR> <Plug>(gosh_repl_send_block)
 
 filetype plugin indent on     " required!
