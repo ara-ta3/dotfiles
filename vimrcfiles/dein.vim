@@ -6,19 +6,24 @@ let s:dein_src = '~/.config/dein.vim/repos/github.com/Shougo/dein.vim'
 execute 'set runtimepath+=' . s:dein_src
 call dein#begin(s:dein_base)
 call dein#add(s:dein_src)
+" color schemes
+call dein#add('tomasr/molokai')
+call dein#add('miconda/lucariox.vim')
+
+" other plugins <- TODO
 call dein#add('scrooloose/nerdtree')
 call dein#add('mattn/emmet-vim')
 call dein#add('vim-scripts/vim-niji')
 call dein#add('scrooloose/syntastic')
-call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('Shougo/unite.vim')
-call dein#add('tomasr/molokai')
 call dein#add('vim-scripts/EnhCommentify.vim')
 call dein#add('h1mesuke/vim-alignta')
 call dein#add('rcmdnk/vim-markdown')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('qpkorr/vim-renamer')
 call dein#add('kannokanno/previm')
+
+" ddc
 call dein#add('Shougo/ddc.vim')
 call dein#add('vim-denops/denops.vim')
 call dein#add('Shougo/ddc-around')

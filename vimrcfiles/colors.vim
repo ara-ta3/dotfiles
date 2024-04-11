@@ -6,8 +6,13 @@ function! s:color_molokai()
     colorscheme molokai
 endfunction
 
+function! s:color_lucariox()
+    colorscheme lucariox
+endfunction
+
+
 try
-    call s:color_molokai()
+    call s:color_lucariox()
 catch
     echo "color scheme is not installed"
 endtry
