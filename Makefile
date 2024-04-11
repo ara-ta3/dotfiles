@@ -13,7 +13,6 @@ install-vim: clean \
 	$(HOME)/.config/dein.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.vim
-	$(MAKE) -f ./vim.mk all
 
 install-brew:
 	brew bundle
