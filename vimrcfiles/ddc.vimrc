@@ -1,4 +1,4 @@
-call ddc#custom#patch_global('sources', ['around', 'vim-lsp'])
+call ddc#custom#patch_global('sources', ['around', 'file', 'vim-lsp'])
 call ddc#custom#patch_global('sourceOptions', {
             \ '_': {
             \   'matchers': ['matcher_head'],
@@ -7,6 +7,11 @@ call ddc#custom#patch_global('sourceOptions', {
             \ 'around': {
             \   'mark': 'A',
             \   'minAutoCompleteLength': 1,
+            \ },
+            \ 'file': {
+            \   'mark': 'F',
+            \   'minAutoCompleteLength': 1,
+            \   'forceCompletionPattern': '\S/\S*',
             \ },
             \ 'vim-lsp': {
             \   'mark': 'LSP',

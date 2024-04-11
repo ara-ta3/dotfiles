@@ -51,6 +51,7 @@ call dein#add('Shougo/pum.vim')
 call dein#add('prabirshrestha/vim-lsp')
 call dein#add('mattn/vim-lsp-settings')
 call dein#add('shun/ddc-source-vim-lsp')
+call dein#add('LumaKernel/ddc-file')
 call dein#end()
 
 filetype plugin indent on
