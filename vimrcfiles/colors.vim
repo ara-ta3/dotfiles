@@ -6,13 +6,8 @@ function! s:color_molokai()
     colorscheme molokai
 endfunction
 
-function! s:color_badwolf()
-    colorscheme badwolf
-    highlight Normal ctermbg=none
-endfunction
-
 try
-    call s:color_badwolf()
+    call s:color_molokai()
 catch
     echo "color scheme is not installed"
 endtry
