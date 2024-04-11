@@ -3,6 +3,7 @@ call ddc#custom#patch_global('sourceOptions', {
             \ '_': {
             \   'matchers': ['matcher_head'],
             \   'sorters': ['sorter_rank'],
+            \   'converters': ['converter_remove_overlap'],
             \ },
             \ 'around': {
             \   'mark': 'A',
@@ -16,6 +17,7 @@ call ddc#custom#patch_global('sourceOptions', {
             \ 'vim-lsp': {
             \   'mark': 'LSP',
             \   'minAutoCompleteLength': 1,
+            \   'forceCompletionPattern': '\.|:|->|"\w+/*'
             \ }
             \ })
 call ddc#custom#patch_global(#{
