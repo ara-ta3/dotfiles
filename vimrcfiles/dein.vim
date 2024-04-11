@@ -22,6 +22,7 @@ call dein#add('rcmdnk/vim-markdown')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('qpkorr/vim-renamer')
 call dein#add('kannokanno/previm')
+call dein#add('preservim/vim-indent-guides')
 
 " ddc
 call dein#add('Shougo/ddc.vim')
