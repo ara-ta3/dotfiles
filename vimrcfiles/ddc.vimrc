@@ -17,7 +17,7 @@ call ddc#custom#patch_global('sourceOptions', {
             \ 'vim-lsp': {
             \   'mark': 'LSP',
             \   'minAutoCompleteLength': 1,
-            \   'forceCompletionPattern': '\.|:|->|"\w+/*'
+            \   'forceCompletionPattern': '\.|:|->|"\w+/*|\S'
             \ }
             \ })
 call ddc#custom#patch_global(#{
