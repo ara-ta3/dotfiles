@@ -1,7 +1,6 @@
-source $HOME/dotfiles/vimrcfiles/.vimrc.common
-source $HOME/dotfiles/vimrcfiles/dein.vimrc
-source $HOME/dotfiles/vimrcfiles/dein.detail.vimrc
-source $HOME/dotfiles/vimrcfiles/.vimrc.colors
-source $HOME/dotfiles/vimrcfiles/.vimrc.syntax
-source $HOME/dotfiles/vimrcfiles/ddc.vimrc
-source $HOME/dotfiles/vimrcfiles/lsp.vimrc
+source $HOME/dotfiles/vimrcfiles/common.vim
+source $HOME/dotfiles/vimrcfiles/dein.vim
+source $HOME/dotfiles/vimrcfiles/colors.vim
+source $HOME/dotfiles/vimrcfiles/syntax.vim
+source $HOME/dotfiles/vimrcfiles/ddc.vim
+source $HOME/dotfiles/vimrcfiles/lsp.vim
