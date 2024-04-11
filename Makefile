@@ -9,10 +9,9 @@ install-ideavim: $(HOME)/.ideavimrc
 install-nvim: $(HOME)/.config install-vim
 	ln -s $(HOME)/.vim $</nvim
 
-install-vim: clean \
-	$(HOME)/.config/dein.vim \
-	$(HOME)/.vimrc \
-	$(HOME)/.vim
+install-vim: clean $(HOME)/.config/dein.vim
+	ln -sf $(current_dir)/.vim $(HOME)/.vim
+	ln -sf $(current_dir)/.vimrc $(HOME)/.vimrc
 
 install-brew:
 	brew bundle
@@ -33,12 +32,6 @@ clean:
 	rm -rf $(HOME)/.config/nvim
 
 $(HOME)/.ideavimrc: $(current_dir)/ideavimrc
-	ln -sf $< $@
-
-$(HOME)/.vimrc: $(current_dir)/.vimrc
-	ln -sf $< $@
-
-$(HOME)/.vim: $(current_dir)/.vim
 	ln -sf $< $@
 
 $(current_dir)/.vim/bundle/Vundle.vim:
