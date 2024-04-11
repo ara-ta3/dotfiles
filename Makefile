@@ -45,7 +45,7 @@ $(HOME)/.config/peco: $(HOME)/.config
 	cp -rf ./config/peco $@
 
 $(HOME)/.config/dein.vim: $(HOME)/.config/install.dein.vim.sh
-	sh $< $@
+	sh $< $@ --use-vim-config
 
 $(HOME)/.config/install.dein.vim.sh: $(HOME)/.config
 	curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh > $@
