@@ -41,10 +41,6 @@ function godir () {
     cd $GOPATH/src/github.com/ara-ta3
 }
 
-function hub-browse () {
-    hub browse $(ghq list|peco|cut -d "/" -f 2,3)
-}
-
 function git-get () {
     ghq get $1
 }
@@ -86,10 +82,8 @@ zle -N peco-path
 zle -N peco-select-history
 zle -N ghq-peco
 zle -N ghqdir
-zle -N hub-browse
 bindkey '^r' peco-select-history
 bindkey '^f' peco-path 
 bindkey '^G' ghq-peco
-bindkey '^H^H' hub-browse
 bindkey "\e[Z" reverse-menu-complete
 bindkey '^m' do_enter
