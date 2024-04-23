@@ -13,3 +13,7 @@ if executable('gopls')
                 \ 'whitelist': ['go'],
                 \ })
 endif
+
+nnoremap <C-i> :LspHover<CR>
+nnoremap <C-d> :LspDefinition<CR>
+nnoremap <C-b> :LspImplementation<CR>
