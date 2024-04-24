@@ -30,6 +30,7 @@ nnoremap <Up>   gk
 nnoremap W :<C-u>w<CR>
 nnoremap <C-u> :Unite<CR>
 nnoremap qq :q<CR>
+nnoremap <C-k> D
 
 function! ToggleUnderscoreInIskeyword()
     let l:ikw = &iskeyword
