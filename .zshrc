@@ -23,7 +23,7 @@ source ~/dotfiles/zshrcfiles/zshrc.func
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
-export WORDCHARS='*?_-.[]~&;!#$%^(){}<>+'
+export WORDCHARS='*?.[]~&;!#$%^(){}<>+'
 export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=CxGxcxdxCxegedabagacad
