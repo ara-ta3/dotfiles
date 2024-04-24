@@ -10,4 +10,5 @@ augroup END
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_markdown = ['prettier']
+let g:neoformat_enabled_yaml = ['prettier']
 
