@@ -10,10 +10,6 @@ augroup scala
     autocmd FileType sbt.scala set filetype=sbt
 augroup END
 
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scala.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/scala.vimrc
-endif
-
 augroup markdown
     autocmd!
     autocmd FileType md set filetype=markdown
