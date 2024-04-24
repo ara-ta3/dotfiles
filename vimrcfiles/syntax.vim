@@ -1,45 +1,22 @@
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/coffee.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/coffee.vimrc
-endif
+augroup go
+    autocmd!
+    autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
+augroup END
 
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/conffiles.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/conffiles.vimrc
-endif
-
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/go.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/go.vimrc
-endif
-
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/js.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/js.vimrc
-endif
-
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/php.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/php.vimrc
-endif
-
+augroup scala
+    autocmd!
+    autocmd FileType scala set dictionary=~/dotfiles/.vim/dictionary/scala.dict
+    autocmd FileType scala set wildignore+=*/target/*
+    autocmd FileType sbt.scala set filetype=sbt
+augroup END
 
 if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scala.vimrc'))
     source $HOME/dotfiles/vimrcfiles/syntax/scala.vimrc
 endif
 
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scala.vim'))
-    source $HOME/dotfiles/vimrcfiles/syntax/scala.vim
-endif
+augroup markdown
+    autocmd!
+    autocmd FileType md set filetype=markdown
+augroup END
 
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/scheme.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/scheme.vimrc
-endif
-
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/twig.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/twig.vimrc
-endif
-
-if filereadable(expand('$HOME/dotfiles/vimrcfiles/syntax/typescript.vimrc'))
-    source $HOME/dotfiles/vimrcfiles/syntax/typescript.vimrc
-endif
-
-source $HOME/dotfiles/vimrcfiles/syntax/flow.vimrc
-source $HOME/dotfiles/vimrcfiles/syntax/markdown.vimrc
-source $HOME/dotfiles/vimrcfiles/syntax/ruby.vimrc
 syntax on

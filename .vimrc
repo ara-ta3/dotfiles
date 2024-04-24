@@ -4,3 +4,4 @@ source $HOME/dotfiles/vimrcfiles/colors.vim
 source $HOME/dotfiles/vimrcfiles/syntax.vim
 source $HOME/dotfiles/vimrcfiles/ddc.vim
 source $HOME/dotfiles/vimrcfiles/lsp.vim
+source $HOME/dotfiles/vimrcfiles/fmt.vim

@@ -10,6 +10,9 @@ call dein#add(s:dein_src)
 call dein#add('tomasr/molokai')
 call dein#add('miconda/lucariox.vim')
 
+" fmt
+call dein#add('sbdchd/neoformat')
+
 " other plugins <- TODO
 call dein#add('scrooloose/nerdtree')
 call dein#add('mattn/emmet-vim')
