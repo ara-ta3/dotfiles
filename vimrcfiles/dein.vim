@@ -21,11 +21,14 @@ call dein#add('scrooloose/syntastic')
 call dein#add('Shougo/unite.vim')
 call dein#add('vim-scripts/EnhCommentify.vim')
 call dein#add('h1mesuke/vim-alignta')
-call dein#add('rcmdnk/vim-markdown')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('qpkorr/vim-renamer')
 call dein#add('kannokanno/previm')
 call dein#add('preservim/vim-indent-guides')
+
+" syntax
+call dein#add('hashivim/vim-terraform')
+call dein#add('rcmdnk/vim-markdown')
 
 " ddc
 call dein#add('Shougo/ddc.vim')

@@ -12,6 +12,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set hlsearch
+set iskeyword-=_
 
 " スペース可視化
 set list
@@ -38,3 +39,4 @@ imap <C-a> <Esc>0i
 " indent_guides
 let g:indent_guides_start_level=1
 let g:indent_guides_enable_on_vim_startup=1
+
