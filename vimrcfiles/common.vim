@@ -12,7 +12,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set hlsearch
-set iskeyword-=_
 
 " スペース可視化
 set list
@@ -31,6 +30,16 @@ nnoremap <Up>   gk
 nnoremap W :<C-u>w<CR>
 nnoremap <C-u> :Unite<CR>
 nnoremap qq :q<CR>
+
+function! ToggleUnderscoreInIskeyword()
+    let l:ikw = &iskeyword
+    if l:ikw =~# ',_'
+        set iskeyword-=_
+    else
+        set iskeyword+=_
+    endif
+endfunction
+nnoremap <C-_> :call ToggleUnderscoreInIskeyword()<CR>
 
 " imap
 imap jj <Esc>
