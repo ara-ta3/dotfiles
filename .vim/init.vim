@@ -18,6 +18,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('miconda/lucariox.vim')
   call dein#add('tomasr/molokai')
 
+  " fmt
+  call dein#add('sbdchd/neoformat')
+
+
   " other plugins <- TODO
   call dein#add('scrooloose/nerdtree')
   call dein#add('mattn/emmet-vim')
