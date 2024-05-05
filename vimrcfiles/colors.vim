@@ -12,7 +12,7 @@ endfunction
 
 
 try
-    call s:color_lucariox()
+    call s:color_molokai()
 catch
     echo "color scheme is not installed"
 endtry
