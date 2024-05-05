@@ -53,7 +53,7 @@ function povo() {
     fi
 }
 
-function d_rebuild () {
+function d_compose_rebuild () {
     if [ -n "$1" ]; then
         docker compose rm --force --stop $1 && docker compose up -d --build $1
     fi
