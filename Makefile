@@ -66,16 +66,12 @@ clean-zsh:
 
 install-zsh: $(HOME)/.zshrc \
 	$(HOME)/.zfunc/_docker \
-	$(HOME)/.zfunc/_hub
 
 $(HOME)/.zshrc: .zshrc
 	ln -sf $< $@
 
 $(HOME)/.zfunc/_docker: $(HOME)/.zfunc
 	curl -L https://raw.github.com/felixr/docker-zsh-completion/master/_docker > $@
-
-$(HOME)/.zfunc/_hub: $(HOME)/.zfunc
-	curl -L https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion > $@
 
 $(zdirs):
 	mkdir -p $@
