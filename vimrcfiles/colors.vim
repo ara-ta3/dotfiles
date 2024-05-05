@@ -12,7 +12,11 @@ endfunction
 
 
 try
-    call s:color_molokai()
+    if $VIM_COLOR == "molokai"
+        call s:color_molokai()
+    elseif $VIM_COLOR == "lucariox"
+        call s:color_lucariox()
+    endif
 catch
     echo "color scheme is not installed"
 endtry
