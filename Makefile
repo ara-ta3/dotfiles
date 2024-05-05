@@ -7,7 +7,7 @@ current_dir=$(shell pwd)
 install-ideavim: $(HOME)/.ideavimrc
 
 install-nvim: $(HOME)/.config
-	ln -s $(HOME)/.vim $</nvim
+	ln -s $(HOME)/dotfiles/.vim $</nvim
 
 install-vim: clean $(HOME)/.config/dein.vim
 	ln -sf $(current_dir)/.vim $(HOME)/.vim
