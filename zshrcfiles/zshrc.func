@@ -1,20 +1,4 @@
-function run-docker () {
-    docker run -i -t `docker images |grep -v REPOSITORY|peco |awk '{print $1 ":" $2}'` /bin/bash
-}
 
-function exec-docker () {
-    if [ -n "$1" ]; then
-        docker exec -it $1 bash
-    fi
-}
-
-function run-remote-docker () {
-    docker run -i -t `docker search tarata|grep -v NAME|peco |awk '{print $1}'` /bin/bash
-}
-
-function pull-remote-docker () {
-    docker pull `docker search tarata|grep -v NAME|peco |awk '{print $1}'`
-}
 
 function ssh-peco () {
     host=$(grep -iE '^host\s+(\w|\d)+' ~/.ssh/config | awk '{print $2}' | peco)
@@ -30,14 +14,6 @@ git branch --merged |grep -v master|grep -v $(git symbolic-ref --short HEAD)|tr 
 
 function unix2date () {
     gdate "+%Y-%m-%d %H:%M:%S" --date "@$1"
-}
-
-function docker-clean () {
-    docker ps -aq -f status=exited -f status=dead | xargs docker rm
-}
-
-function docker-clean-image () {
-    docker volume rm $(docker volume ls |awk '{print $2}')
 }
 
 function gssm () {
@@ -58,5 +34,41 @@ function slack-notify () {
     else
         echo SLACK_WEBHOOK_URL env is empty
         exit 1
+    fi
+}
+
+function povo() {
+    if date --version &>/dev/null; then
+        if [ "$1" ]; then
+            date -d "$1 +180 days" +"%Y-%m-%d"
+        else
+            date -d "+180 days" +"%Y-%m-%d"
+        fi
+    elif date -v+1d &>/dev/null; then
+        if [ "$1" ]; then
+            date -j -f "%Y-%m-%d" -v+180d "$1" "+%Y-%m-%d"
+        else
+            date -v+180d "+%Y-%m-%d"
+        fi
+    fi
+}
+
+function d_rebuild () {
+    if [ -n "$1" ]; then
+        docker compose rm --force --stop $1 && docker compose up -d --build $1
+    fi
+}
+
+function d_clean () {
+    docker ps -aq -f status=exited -f status=dead | xargs docker rm
+}
+
+function d_clean_image () {
+    docker volume rm $(docker volume ls |awk '{print $2}')
+}
+
+function d_exec () {
+    if [ -n "$1" ]; then
+        docker exec -it $1 bash
     fi
 }
