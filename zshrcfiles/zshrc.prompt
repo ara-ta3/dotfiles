@@ -4,8 +4,7 @@ autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats '[%b]@(%r)' '%c' '%u'
-zstyle ':vcs_info:git:*' actionformats '[%b]@(%r)|%a' '%c' '%u'
+zstyle ':vcs_info:git:*' formats '%b'
 
 precmd () {
     psvar=()
@@ -54,11 +53,10 @@ function left-prompt {
 }
 
 function git-prompt {
-    echo "%1(v|%{${fg[green]}%}%1v%{${reset_color}%}|)%"
+    echo "%1v"
 }
 
 gitprompt="$(git-prompt)"
-# above="%{[30;48;5;237m%}%{[38;5;178m%}%n@%m (Up %2v) %{[30;48;5;067m%}%{[38;5;007m%}%~%{[0m%}"
 above="$(left-prompt)"
 
 PROMPT="$above
@@ -68,39 +66,4 @@ RPROMPT=$gitprompt
 
 SPROMPT="%{$fg[magenta]%}%{$suggest%}( *◕~◕%)? < もしかして%{$fg[red]%} %B%r%b ${reset_color}%{$fg[magenta]%}かな? [そう!(%{$fg[blue]%}y${reset_color}%{$fg[magenta]%}), 違う!(%{$fg[red]%}n${reset_color}%{$fg[magenta]%}),a,e]: ${reset_color}"
 
-# mysql prompt
-m_color0=$'\e[1;36m'
-m_color1=$'\e[1;33m'
-m_clear=$'\e[0m'
-export MYSQL_PS1="$m_color0(\d)$m_color1> $m_clear"
-## mysql client user
-typeset -A mysql_prompt_style_client_user
-mysql_prompt_style_client_user=(
-'root'     $fg_bold[red]
-'*'        $fg_bold[green]
-)
 
-# mysql client host
-typeset -A mysql_prompt_style_client_host
-mysql_prompt_style_client_host=(
-'*.local.*'     "$fg_bold[green]"
-'*.dev.*'       "$fg_bold[yellow]"
-'*'             "$fg_bold[red]"
-)
-# mysql server user
-typeset -A mysql_prompt_style_server_user
-mysql_prompt_style_server_user=(
-'root'          "$bg_bold[red]$fg_bold[yellow]"
-'*'             "$fg_bold[blue]"
-)
-# mysql server host
-typeset -A mysql_prompt_style_server_host
-mysql_prompt_style_server_host=(
-'*master*'      "$bg_bold[red]$fg_bold[yellow]"  # Master Server
-'*slave*'       "$bg[yellow]$fg[black]" # Slvae Server
-'*'             "$fg_bold[blue]"
-)
-# mysql prompt style (Should use single quoted string.)
-mysql_prompt='${style_client_host}${USER}@${HOST}${fg_bold[white]} -> '
-mysql_prompt=$mysql_prompt'${style_server_user}\u${reset_color}${fg_bold[white]}@${style_server_host}\h${reset_color}${fg_bold[white]}:${fg[magenta]}\d ${fg_bold[white]}\v\n'
-mysql_prompt=$mysql_prompt'${fg_bold[white]}${bg_level}mysql${reset_color}> '
