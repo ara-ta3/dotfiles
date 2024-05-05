@@ -33,6 +33,13 @@ function ghq-peco () {
     fi
 }
 
+function gg () {
+    local selected_dir=$(printf "%s\n%s" "~/dotfiles" "$(ghq list -p)"| peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        cd ${selected_dir}
+    fi
+}
+
 function ghqdir () {
     cd $(ghq root)/github.com/ara-ta3
 }
@@ -85,5 +92,4 @@ zle -N ghqdir
 bindkey '^r' peco-select-history
 bindkey '^f' peco-path 
 bindkey '^G' ghq-peco
-bindkey "\e[Z" reverse-menu-complete
 bindkey '^m' do_enter
