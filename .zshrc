@@ -1,16 +1,16 @@
 setopt auto_pushd
 setopt auto_cd
-setopt correct
-setopt cdable_vars
-setopt no_beep
-setopt nolistbeep
-setopt hist_ignore_dups
 setopt auto_list
 setopt auto_menu
-setopt print_eight_bit
-setopt pushd_ignore_dups
+setopt correct
+setopt cdable_vars
 setopt extended_history
+setopt hist_ignore_dups
+setopt no_beep
+setopt nolistbeep
+setopt print_eight_bit
 setopt print_exit_value
+setopt pushd_ignore_dups
 
 source ~/dotfiles/zshrcfiles/zshrc.alias
 source ~/dotfiles/zshrcfiles/zshrc.zplug
