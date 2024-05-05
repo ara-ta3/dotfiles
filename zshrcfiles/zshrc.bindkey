@@ -26,7 +26,7 @@ function peco-path() {
 }
 
 function ghq-peco () {
-    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    local selected_dir=$(printf "%s\n%s" "~/dotfiles" "$(ghq list -p)"| peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
         zle accept-line
