@@ -18,7 +18,6 @@ source ~/dotfiles/zshrcfiles/zshrc.completion
 source ~/dotfiles/zshrcfiles/zshrc.bindkey
 source ~/dotfiles/zshrcfiles/zshrc.prompt
 source ~/dotfiles/zshrcfiles/zshrc.func
-[ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
@@ -28,6 +27,4 @@ export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=CxGxcxdxCxegedabagacad
 export EDITOR=vim
-
-# added by travis gem
-[ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
+[ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
