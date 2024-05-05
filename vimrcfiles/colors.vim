@@ -15,7 +15,9 @@ try
     if $VIM_COLOR == "molokai"
         call s:color_molokai()
     elseif $VIM_COLOR == "lucariox"
-        call s:color_lucariox()
+        call s:color_lucariox() 
+    else 
+        call s:color_molokai()
     endif
 catch
     echo "color scheme is not installed"
