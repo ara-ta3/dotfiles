@@ -8,7 +8,7 @@ zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:descriptions' format '%F{yellow}Completing %B%d%b%f'$DEFAULT
 fpath=($HOME/.zsh.d/zsh-completions/src $HOME/.zfunc $fpath)
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH:$fpath
     chmod go-w "$(brew --prefix)/share"
 fi
 autoload -U compinit && compinit -C
