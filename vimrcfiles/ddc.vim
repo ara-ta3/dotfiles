@@ -28,6 +28,6 @@ call ddc#custom#patch_global(#{
         \ })
 call ddc#enable()
 
-inoremap <expr> <CR> pum#visible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <CR> pum#visible() ? "\<Cmd>call pum#map#confirm()<CR>" : "\<CR>"
 inoremap <expr> <Tab> pum#visible() ? "\<Cmd>call pum#map#insert_relative(+1)\<CR>" : "\<Tab>"
 inoremap <S-Tab> <Cmd>call pum#map#insert_relative(-1)<CR>
