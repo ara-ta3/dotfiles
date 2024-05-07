@@ -34,12 +34,6 @@ clean:
 $(HOME)/.ideavimrc: $(current_dir)/ideavimrc
 	ln -sf $< $@
 
-$(current_dir)/.vim/bundle/Vundle.vim:
-	git clone https://github.com/gmarik/Vundle.vim.git $@
-
-$(current_dir)/.vim/colors/molokai.vim:
-	curl -L https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > $@
-
 $(HOME)/.config/peco: $(HOME)/.config
 	rm -rf $@
 	cp -rf ./config/peco $@
@@ -89,7 +83,7 @@ $(HOME)/.bashrc: $(current_dir)/bashrc
 #####           git           #####
 ###################################
 
-git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(HOME)/.gitignore_global
+git-config: $(HOME)/.git_commit_template $(HOME)/.gitignore_global
 	git config --global alias.br "branch -vv"
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
@@ -108,14 +102,6 @@ git-config: $(HOME)/.git_template/hooks/pre-push $(HOME)/.git_commit_template $(
 	git config --global core.excludesfile ${HOME}/.gitignore_global
 	git config --global pager.branch false
 
-$(HOME)/.git_template/hooks/pre-push: $(HOME)/.git_template/hooks
-	touch $@
-	echo "$$git_pre_push" > $@
-	chmod +x $@
-
-$(HOME)/.git_template/hooks:
-	mkdir -p $@
-
 $(HOME)/.git_commit_template:
 	touch $@
 	echo "$$git_commit_template" > $@
@@ -123,34 +109,6 @@ $(HOME)/.git_commit_template:
 $(HOME)/.gitignore_global:
 	touch $@
 	echo "$$git_ignore_global" > $@
-
-define git_pre_push
-#!/bin/sh
-PROTECTED_BRANCHES=( master release )
-CURRENT_BRANCH=$$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-PUSH_COMMAND=$$(ps -ocommand= -p $$PPID)
-IS_DESTRUCTIVE='force|delete|\-f'
-WILL_REMOVE_PROTECTED_BRANCH=':'$$PROTECTED_BRANCH
-for i in "$${PROTECTED_BRANCHES[@]}"
-do
-    PROTECTED_BRANCH=$$i
-    MESSAGE="NO $$PUSH_COMMAND TO $$PROTECTED_BRANCH run 'git fetch && git merge origin $$PROTECTED_BRANCH' by pre-push hook"
-    if [[ $$PUSH_COMMAND =~ $$IS_DESTRUCTIVE ]] && [ $$CURRENT_BRANCH = $$PROTECTED_BRANCH ]; then
-        echo $$MESSAGE
-        exit 1
-    fi
-    if [[ $$PUSH_COMMAND =~ $$IS_DESTRUCTIVE ]] && [[ $$PUSH_COMMAND =~ $$PROTECTED_BRANCH ]]; then
-        echo $$MESSAGE
-        exit 1
-    fi
-    if [[ $$PUSH_COMMAND =~ $$WILL_REMOVE_PROTECTED_BRANCH ]]; then
-        echo $$MESSAGE
-        exit 1
-    fi
-done
-exit 0
-endef
-export git_pre_push
 
 define git_commit_template
 
