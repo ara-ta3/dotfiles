@@ -32,8 +32,11 @@ if dein#load_state(s:dein_dir)
   call dein#add('h1mesuke/vim-alignta')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('qpkorr/vim-renamer')
-  call dein#add('kannokanno/previm')
   call dein#add('preservim/vim-indent-guides')
+
+  # previm
+  call dein#add('kannokanno/previm')
+  call dein#add('tyru/open-browser.vim')
 
   " syntax
   call dein#add('hashivim/vim-terraform')
