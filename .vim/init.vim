@@ -21,7 +21,6 @@ if dein#load_state(s:dein_dir)
   " fmt
   call dein#add('sbdchd/neoformat')
 
-
   " other plugins <- TODO
   call dein#add('scrooloose/nerdtree')
   call dein#add('mattn/emmet-vim')
@@ -34,7 +33,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('qpkorr/vim-renamer')
   call dein#add('preservim/vim-indent-guides')
 
-  # previm
+  " previm
   call dein#add('kannokanno/previm')
   call dein#add('tyru/open-browser.vim')
 

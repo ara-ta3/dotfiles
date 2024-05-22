@@ -25,7 +25,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('qpkorr/vim-renamer')
 call dein#add('preservim/vim-indent-guides')
 
-# previm
+" previm
 call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
 
