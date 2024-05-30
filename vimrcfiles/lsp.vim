@@ -17,3 +17,12 @@ endif
 nnoremap <C-i> :LspHover<CR>
 nnoremap <C-d> :LspDefinition<CR>
 nnoremap <C-b> :LspImplementation<CR>
+
+
+" lint
+let g:ale_linters = {
+\   'markdown': ['textlint'],
+\   'text': ['textlint'],
+\}
+let g:ale_markdown_textlint_options = '--config ~/.textlintrc'
+let g:ale_text_textlint_options = '--config ~/.textlintrc'
