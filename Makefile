@@ -25,6 +25,9 @@ install-node-manager:
 	echo "export $$VOLTA_HOME=$$HOME/.volta"
 	echo "export $$PATH=$$VOLTA_HOME/bin:$$PATH"
 
+install-textlint:
+	npm install -g textlint textlint-rule-preset-ja-technical-writing textlint-lsp
+
 install-config: $(HOME)/.config/peco git-config
 
 clean:
