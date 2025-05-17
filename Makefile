@@ -9,7 +9,7 @@ install-ideavim: $(HOME)/.ideavimrc
 install-nvim: $(HOME)/.config
 	ln -s $(HOME)/dotfiles/.vim $</nvim
 
-install-vim: clean $(HOME)/.config/dein.vim
+install-vim: clean 
 	ln -sf $(current_dir)/.vim $(HOME)/.vim
 	ln -sf $(current_dir)/.vimrc $(HOME)/.vimrc
 
@@ -41,10 +41,10 @@ $(HOME)/.config/peco: $(HOME)/.config
 	rm -rf $@
 	cp -rf ./config/peco $@
 
-$(HOME)/.config/dein.vim: $(HOME)/.config/install.dein.vim.sh
+$(HOME)/.cache/dein.vim: $(HOME)/.cache/install.dein.vim.sh
 	sh $< $@ --use-vim-config
 
-$(HOME)/.config/install.dein.vim.sh: $(HOME)/.config
+$(HOME)/.cache/install.dein.vim.sh: $(HOME)/.cache
 	curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh > $@
 
 $(HOME)/.config:
@@ -91,6 +91,7 @@ git-config: $(HOME)/.git_commit_template $(HOME)/.gitignore_global
 	git config --global alias.graph "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 	git config --global alias.log graph
 	git config --global alias.mm "!sh -c '(git br|grep master > /dev/null) && git merge origin/master || git merge origin/main'"
+	git config --global alias.rr "!sh -c '(git br|grep master > /dev/null) && git rebase origin/master || git rebase origin/main'"
 	git config --global alias.f "fetch -p"
 	git config --global alias.m "merge"
 	git config --global alias.pushf "push --force-with-lease"
