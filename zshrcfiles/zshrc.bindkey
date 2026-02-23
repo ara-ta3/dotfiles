@@ -26,6 +26,13 @@ function peco-path() {
 }
 
 function ghq-peco () {
+    local selected_dir=$(
+        {
+            ghq list -p
+            find "$HOME/.codex/worktrees" -mindepth 2 -maxdepth 2 -type d
+        } | peco --query "$LBUFFER"
+    )
+
     local selected_dir=$(printf "%s\n%s" "~/dotfiles" "$(ghq list -p)"| peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
@@ -34,7 +41,13 @@ function ghq-peco () {
 }
 
 function gg () {
-    local selected_dir=$(printf "%s\n%s" "~/dotfiles" "$(ghq list -p)"| peco --query "$LBUFFER")
+    local selected_dir=$(
+        {
+            printf "%s\n" "$HOME/dotfiles"
+            ghq list -p
+            find "$HOME/.codex/worktrees" -mindepth 2 -maxdepth 2 -type d
+        } | peco --query "$LBUFFER"
+    )
     if [ -n "$selected_dir" ]; then
         cd ${selected_dir}
     fi
