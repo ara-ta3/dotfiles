@@ -99,6 +99,7 @@ git-config: $(HOME)/.git_commit_template $(HOME)/.gitignore_global
 	git config --global alias.s "switch"
 	git config --global alias.sc "switch -c"
 	git config --global alias.r "restore --progress"
+	git config --global alias.wp "worktree prune -v"
 	git config --global init.templatedir '${HOME}/.git_template'
 	git config --global commit.template '${HOME}/.git_commit_template'
 	git config --global core.pager "less -cm"

@@ -72,3 +72,16 @@ function d_exec () {
         docker exec -it $1 bash
     fi
 }
+
+function gww () {
+    git wt $(git wt | tail -n +2 | peco | awk '{print $(NF-1)}')
+}
+
+function gwwm () {
+    (git br |grep master > /dev/null) && git wt master || git wt main
+}
+
+function gwreview() {
+  local b=$1
+  git switch -c review/$b $b
+}
