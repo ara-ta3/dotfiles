@@ -11,17 +11,6 @@ setopt nolistbeep
 setopt print_eight_bit
 setopt print_exit_value
 setopt pushd_ignore_dups
-function set_tab_title() {
-  local branch
-  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-    if [[ -n "$branch" ]]; then
-    print -Pn "\e]1;$branch\a"
-  else
-    print -Pn "\e]1;%2~\a"
-  fi
-}
-precmd_functions+=(set_tab_title)
-
 source ~/dotfiles/zshrcfiles/zshrc.alias
 source ~/dotfiles/zshrcfiles/zshrc.zplug
 source ~/dotfiles/zshrcfiles/zshrc.completion

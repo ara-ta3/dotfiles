@@ -6,6 +6,17 @@ zstyle ':vcs_info:*' max-exports 6 # formatに入る変数の最大数
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats '%b'
 
+function set_tab_title() {
+  local branch
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  repo=$(basename -s .git $(git remote get-url origin 2>/dev/null) 2>/dev/null)
+  if [[ -n "$branch" ]]; then
+    print -Pn "\e]1;$branch@$repo\a"
+  else
+    print -Pn "\e]1;%2~\a"
+  fi
+}
+precmd_functions+=(set_tab_title)
 precmd () {
     psvar=()
     LANG=ja_JP.UTF-8 vcs_info
